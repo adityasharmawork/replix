@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --primary: #2d2d2d;
+  --primary-light: #404040;
+  --primary-dark: #1a1a1a;
+  --secondary: #e0e0e0;
+  --secondary-light: #f0f0f0;
+  --secondary-dark: #d0d0d0;
+  --accent: #ffffff;
+  --accent-light: #ffffff;
+  --accent-dark: #e6e6e6;
+  --highlight: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #f5f5f5;
+  }
+}
+
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  ::selection {
+    background: var(--highlight);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glassmorphism {
+    @apply bg-white/5 backdrop-blur-md backdrop-saturate-150 border border-white/10;
+  }
+  
+  .glassmorphism-dark {
+    @apply bg-zinc-900/80 backdrop-blur-md backdrop-saturate-150 border border-zinc-800/50;
+  }
+  
+  .frost-panel {
+    @apply bg-white/5 backdrop-blur-md backdrop-saturate-150 border border-white/10 rounded-lg shadow-lg;
+  }
+
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient 8s linear infinite;
+  }
+  
+  .animate-gradient-slow {
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  .terminal-text {
+    font-family: var(--font-geist-mono), monospace;
+    @apply text-sm tracking-tight;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    @apply shadow-glow;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

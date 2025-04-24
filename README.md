@@ -1,5 +1,7 @@
 # 🧠 elif – Elevate the Way You Code
 
+[![Made with ❤️ in Next.js](https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20in-Next.js-000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+
 Welcome to **elif**, your next-generation online IDE built for modern developers.  
 Whether you're a seasoned pro or just getting started, elif gives you a powerful, beautiful, and seamless environment to write, run, and share code with confidence.
 

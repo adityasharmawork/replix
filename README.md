@@ -31,9 +31,15 @@ Supports 10+ programming languages including:
 - JavaScript, TypeScript, C++, Java, Python, Rust, Go, C#, Ruby, and Swift
 
 ### 🎨 Developer-Centric Customization  
-- 5 VS Code-inspired themes  
-- Adjustable font sizes  
-- Personalized coding environment
+- Choose from 5 VS Code-inspired themes to match your vibe:
+  - 🖤 **VS Dark** – Classic dark mode for a sleek dev experience  
+  - 🤍 **VS Light** – Clean and minimal for daylight coding  
+  - 🌌 **GitHub Dark** – Inspired by GitHub’s elegant dark UI  
+  - 🌈 **Monokai** – High-contrast, vibrant syntax highlighting  
+  - 🌅 **Solarized Dark** – Gentle color palette for reduced eye strain  
+- Adjustable font sizes for comfortable, distraction-free coding  
+- Personalized coding environment with session persistence
+
 
 ### ✨ Smart Output Handling  
 - Intelligent Success & Error states  

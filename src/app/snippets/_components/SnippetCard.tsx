@@ -34,54 +34,56 @@ function SnippetCard({snippet}: {snippet: Snippet}) {
     <motion.div
       layout
       className="group relative"
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.2 }}
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.3 }}
     >
       <Link href={`/snippets/${snippet._id}`} className="h-full block">
         <div
-          className="relative h-full bg-zinc-900/80 backdrop-blur-sm rounded-xl 
-          border border-zinc-800/50 hover:border-zinc-700 
-          transition-all duration-300 overflow-hidden"
+          className="relative h-full bg-zinc-900/80 backdrop-blur-md rounded-xl 
+          border border-zinc-800/50 hover:border-indigo-500/30 
+          transition-all duration-300 overflow-hidden group-hover:shadow-[0_0_25px_rgba(99,102,241,0.1)]"
         >
-          <div className="p-6">
+          {/* Subtle gradient background effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 via-transparent to-purple-900/5 opacity-0 group-hover:opacity-100 transition-all duration-700" />
+          
+          <div className="p-6 relative z-10">
             {/* Header */}
-            <div className="flex items-start justify-between mb-4">
+            <div className="flex items-start justify-between mb-5">
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <div
-                    className="absolute inset-0 bg-gradient-to-r from-gray-700 to-zinc-800 rounded-lg blur opacity-20 
-                  group-hover:opacity-30 transition-all duration-500"
-                    area-hidden="true"
+                    className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-lg blur-sm opacity-70 
+                    group-hover:opacity-100 transition-all duration-500"
+                    aria-hidden="true"
                   />
                   <div
-                    className="relative p-2 rounded-lg bg-gradient-to-br from-zinc-700/20 to-zinc-800/20 group-hover:from-zinc-700/30
-                   group-hover:to-zinc-800/30 transition-all duration-500"
+                    className="relative p-2 rounded-lg bg-gradient-to-br from-blue-500/10 to-indigo-500/10 
+                    group-hover:from-blue-500/20 group-hover:to-indigo-500/20 transition-all duration-500
+                    border border-blue-500/10 group-hover:border-blue-500/30"
                   >
                     <Image
                       src={`/${snippet.language}.png`}
                       alt={`${snippet.language} logo`}
-                      className="w-6 h-6 object-contain relative z-10"
-                      width={24}
-                      height={24}
+                      className="w-7 h-7 object-contain relative z-10"
+                      width={28}
+                      height={28}
                     />
                   </div>
                 </div>
-                <div className="space-y-1">
-                  <span className="px-3 py-1 bg-zinc-800/80 text-gray-300 rounded-lg text-xs font-medium">
+                <div className="space-y-1.5">
+                  <span className="px-3 py-1 bg-indigo-500/10 text-indigo-300 rounded-lg text-xs font-medium border border-indigo-500/20">
                     {snippet.language}
                   </span>
-                  <div className="flex items-center gap-2 text-xs text-gray-500">
+                  <div className="flex items-center gap-2 text-xs text-gray-400">
                     <Clock className="size-3" />
                     {new Date(snippet._creationTime).toLocaleDateString()}
                   </div>
                 </div>
               </div>
               <div
-                className="absolute top-5 right-5 z-10 flex gap-4 items-center"
+                className="absolute top-5 right-5 z-10 flex gap-3 items-center"
                 onClick={(e) => e.preventDefault()}
               >
-                {/* <StarButton snippetId={snippet._id} /> */}
-
                 <StarButton snippetId={snippet._id} />
 
                 {user?.id === snippet.userId && (
@@ -92,8 +94,8 @@ function SnippetCard({snippet}: {snippet: Snippet}) {
                       className={`group flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all duration-200
                                   ${
                                     isDeleting
-                                      ? "bg-red-500/20 text-red-400 cursor-not-allowed"
-                                      : "bg-gray-500/10 text-gray-400 hover:bg-red-500/10 hover:text-red-400"
+                                      ? "bg-red-500/20 text-red-400 cursor-not-allowed border border-red-500/20"
+                                      : "bg-zinc-800/50 backdrop-blur-sm text-gray-400 hover:bg-red-500/10 hover:text-red-400 border border-zinc-800/50 hover:border-red-500/30"
                                   }
                                 `}
                     >
@@ -111,24 +113,39 @@ function SnippetCard({snippet}: {snippet: Snippet}) {
             {/* Content */}
             <div className="space-y-4">
               <div>
-                <h2 className="text-xl font-semibold text-white mb-2 line-clamp-1 group-hover:text-gray-300 transition-colors">
+                <h2 className="text-xl font-semibold text-white mb-2 line-clamp-1 group-hover:text-indigo-300 transition-colors">
                   {snippet.title}
                 </h2>
                 <div className="flex items-center gap-3 text-sm text-gray-400">
                   <div className="flex items-center gap-2">
-                    <div className="p-1 rounded-md bg-gray-800/50">
-                      <User className="size-3" />
+                    <div className="p-1 rounded-md bg-zinc-800/80">
+                      <User className="size-3 text-indigo-400" />
                     </div>
                     <span className="truncate max-w-[150px]">{snippet.userName}</span>
                   </div>
                 </div>
               </div>
 
-              <div className="relative group/code">
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-700/20 to-zinc-800/10 rounded-lg opacity-0 group-hover/code:opacity-100 transition-all" />
-                <pre className="relative bg-black/30 rounded-lg p-4 overflow-hidden text-sm text-gray-300 font-mono line-clamp-3">
-                  {snippet.code}
-                </pre>
+              <div className="relative group/code overflow-hidden rounded-lg border border-zinc-800/50 group-hover:border-indigo-500/20">
+                {/* Code preview hover effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-purple-600/5 opacity-0 group-hover/code:opacity-100 transition-all duration-500" />
+                
+                {/* Code preview */}
+                <div className="relative">
+                  {/* Code editor style header */}
+                  <div className="flex items-center bg-zinc-950/80 px-3 py-1.5 border-b border-zinc-800/50">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-500/70"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-500/70"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Code content */}
+                  <pre className="bg-zinc-950/50 p-4 overflow-hidden text-sm text-gray-300 font-mono line-clamp-3">
+                    {snippet.code}
+                  </pre>
+                </div>
               </div>
             </div>
           </div>

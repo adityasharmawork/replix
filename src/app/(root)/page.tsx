@@ -33,11 +33,11 @@ export default function LandingPage() {
                 <Terminal className="w-4 h-4" />
                 <TypewriterText text="TThe future of coding is here" speed={30} />
               </div>
-              <div className="absolute -inset-1 bg-white/5 blur-xl opacity-50 rounded-3xl" />
-              <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight text-glow">
-                Reimagine the way <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-400 animate-gradient-x">
-                You Code
+              <div className="absolute -inset-1 bg-white/5 blur-lg opacity-40 rounded-3xl" />
+              <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300">
+                  Reimagine the way <br />
+                  You Code
                 </span>
               </h1>
             </div>

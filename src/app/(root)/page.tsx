@@ -28,25 +28,25 @@ export default function LandingPage() {
             <div className="absolute top-32 left-1/4 w-72 h-72 bg-white/5 rounded-full filter blur-[120px] opacity-50" />
             <div className="absolute top-40 right-1/4 w-72 h-72 bg-white/5 rounded-full filter blur-[120px] opacity-50" />
             
-            <div className="relative inline-block mt-2 mb-4">
-              <div className="text-sm font-mono text-gray-400 mb-4 inline-flex items-center gap-2 bg-white/5 px-4 py-1.5 rounded-full">
+            <div className="relative inline-block mt-4 mb-16">
+              <div className="text-sm mb-14 font-mono text-gray-400 mb-4 inline-flex items-center gap-2 bg-white/5 px-4 py-1.5 rounded-full">
                 <Terminal className="w-4 h-4" />
                 <TypewriterText text="TThe future of coding is here" speed={30} />
               </div>
-              <div className="absolute -inset-1 bg-white/5 blur-lg opacity-40 rounded-3xl" />
-              <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+              <div className="absolute -inset-1 bg-white/5 blur-xl opacity-50 rounded-3xl" />
+              <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold mb-8  leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300">
                   Reimagine the way <br />
                   You Code
                 </span>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-8 mb-12">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-4 mb-24">
               <span className="font-mono">Elif</span> - All in one Online Compiler cum IDE
             </p>
             
             {/* CTA buttons */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-32">
               <SignedIn>
                 <HomepageButton className="px-8 py-3 rounded-md text-black
                    bg-white hover:bg-gray-200
@@ -68,12 +68,12 @@ export default function LandingPage() {
           </div>
           
           {/* Code Showcase */}
-          <div className="max-w-5xl mx-auto mb-24 animate-float-slow">
+          <div className="max-w-5xl mx-auto mb-40 animate-float-slow">
             <CodeShowcase />
           </div>
           
           {/* Stats Section */}
-          <div className="max-w-5xl mx-auto mb-24">
+          <div className="max-w-5xl mx-auto mt-24 mb-24">
             <h2 className="text-xl font-bold text-center text-white mb-8">
               Powering the developers of tomorrow
             </h2>
@@ -108,7 +108,7 @@ export default function LandingPage() {
           </div>
 
           {/* CTA Card */}
-          <div className="relative max-w-4xl mx-auto my-32">
+          <div className="relative max-w-4xl mx-auto my-64">
             <div className="absolute -inset-0.5 bg-white/10 rounded-lg blur-md opacity-50" />
               
             <div className="relative frost-panel overflow-hidden animate-fade-in-slow">

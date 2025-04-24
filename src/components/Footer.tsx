@@ -64,10 +64,10 @@ function Footer() {
               >
                 <Linkedin className="size-4" />
               </a>
-              <div className="flex items-center gap-1 text-gray-500 text-xs">
+              {/* <div className="flex items-center gap-1 text-gray-500 text-xs">
                 <span>Made with</span>
                 <Heart className="size-3 text-gray-300" />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

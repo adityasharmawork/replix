@@ -29,7 +29,7 @@ export default function LandingPage() {
             <div className="absolute top-40 right-1/4 w-72 h-72 bg-white/5 rounded-full filter blur-[120px] opacity-50" />
             
             <div className="relative inline-block mt-4 mb-16">
-              <div className="text-sm mb-14 font-mono text-gray-400 mb-4 inline-flex items-center gap-2 bg-white/5 px-4 py-1.5 rounded-full">
+              <div className="text-sm mb-14 font-mono text-gray-400 inline-flex items-center gap-2 bg-white/5 px-4 py-1.5 rounded-full">
                 <Terminal className="w-4 h-4" />
                 <TypewriterText text="TThe future of coding is here" speed={30} />
               </div>

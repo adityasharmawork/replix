@@ -47,6 +47,10 @@ export default function RootLayout({
           />
           
           {/* Animated particles with JS will be added in a separate component */}
+
+          {/* Background with subtle patterns and gradients */}
+          <div className="fixed inset-0 bg-dark-400 bg-mesh-pattern z-[-2]" />
+          <div className="fixed inset-0 bg-gradient-radial from-primary-600/5 to-transparent z-[-1] opacity-60" />
           
           <ConvexClientProvider>
             {children}

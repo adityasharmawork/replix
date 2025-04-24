@@ -35,9 +35,9 @@ export default function LandingPage() {
               </div>
               <div className="absolute -inset-1 bg-white/5 blur-xl opacity-50 rounded-3xl" />
               <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight text-glow">
-                Elevate Your <br />
+                Reimagine the way <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-400 animate-gradient-x">
-                  Development Experience
+                You Code
                 </span>
               </h1>
             </div>

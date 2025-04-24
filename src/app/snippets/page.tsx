@@ -53,7 +53,7 @@ function SnippetsPage() {
              text-sm text-gray-400 mb-6"
           >
             <BookOpen className="w-4 h-4" />
-            Community Code Library
+            Community
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ function SnippetsPage() {
             transition={{ delay: 0.2 }}
             className="text-lg text-gray-400 mb-8"
           >
-            Explore a curated collection of code snippets from the community
+            Explore code snippets from the community
           </motion.p>
         </div>
 

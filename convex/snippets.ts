@@ -253,6 +253,7 @@
 
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
+import { Id } from "./_generated/dataModel";
 
 export const createSnippet = mutation({
   args: {
@@ -324,6 +325,42 @@ export const deleteSnippet = mutation({
   },
 });
 
+
+
+
+
+// export const starSnippet = mutation({
+//   args: {
+//     snippetId: v.id("snippets"),
+//   },
+//   handler: async (ctx, args) => {
+//     const identity = await ctx.auth.getUserIdentity();
+//     if (!identity) throw new Error("Not authenticated");
+
+//     const existing = await ctx.db
+//       .query("stars")
+//       .withIndex("by_user_id_and_snippet_id")
+//       .filter(
+//         (q) =>
+//           q.eq(q.field("userId"), identity.subject) && q.eq(q.field("snippetId"), args.snippetId)
+//       )
+//       .first();
+
+//     if (existing) {
+//       if (existing.userId !== identity.subject) {
+//         return;
+//       }
+//       await ctx.db.delete(existing._id);
+//     } else {
+//       await ctx.db.insert("stars", {
+//         userId: identity.subject,
+//         snippetId: args.snippetId,
+//       });
+//     }
+//   },
+// });
+
+
 export const starSnippet = mutation({
   args: {
     snippetId: v.id("snippets"),
@@ -342,6 +379,13 @@ export const starSnippet = mutation({
       .first();
 
     if (existing) {
+      if (existing.userId !== identity.subject) {
+        await ctx.db.insert("stars", {
+          userId: identity.subject,
+          snippetId: args.snippetId,
+        });
+        return;
+      }
       await ctx.db.delete(existing._id);
     } else {
       await ctx.db.insert("stars", {
@@ -351,6 +395,57 @@ export const starSnippet = mutation({
     }
   },
 });
+
+
+
+
+
+// export const starSnippet = mutation({
+//   args: {
+//     snippetId: v.id("snippets"),
+//   },
+//   handler: async (ctx, args) => {
+//     const identity = await ctx.auth.getUserIdentity();
+//     if (!identity) throw new Error("Not authenticated");
+    
+//     // Extract the userId from identity
+//     const userId = identity.subject;
+    
+//     // Debug logging in development
+//     // if (process.env.NODE_ENV === 'development') {
+//     //   console.log(`Star action from userId: ${userId} for snippet: ${args.snippetId}`);
+//     // }
+
+//     const existing = await ctx.db
+//       .query("stars")
+//       .withIndex("by_user_id_and_snippet_id")
+//       .filter(
+//         (q) =>
+//           q.eq(q.field("userId"), userId) && q.eq(q.field("snippetId"), args.snippetId)
+//       )
+//       .first();
+
+//     // Debug the existing star status
+//     // if (process.env.NODE_ENV === 'development') {
+//     //   console.log(`Existing star found: ${!!existing}`);
+//     // }
+
+//     if (existing) {
+//       await ctx.db.delete(existing._id);
+//       return { action: "unstarred" };
+//     } else {
+//       await ctx.db.insert("stars", {
+//         userId: userId,
+//         snippetId: args.snippetId,
+//       });
+//       return { action: "starred" };
+//     }
+//   },
+// });
+
+
+
+
 
 export const addComment = mutation({
   args: {
@@ -427,6 +522,11 @@ export const getComments = query({
   },
 });
 
+
+
+
+
+
 export const isSnippetStarred = query({
   args: {
     snippetId: v.id("snippets"),
@@ -447,6 +547,88 @@ export const isSnippetStarred = query({
     return !!star;
   },
 });
+
+
+
+
+export const isSnippetInMyStarredList = query({
+  args: { snippetId: v.id("snippets") },
+  handler: async (ctx, { snippetId }) => {
+    // 1️⃣ must be signed in
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) return false;
+    const userId = identity.subject;
+
+    // 2️⃣ fetch _only_ this user’s star records
+    const stars = await ctx.db
+      .query("stars")
+      .withIndex("by_user_id")
+      .filter((q) => q.eq(q.field("userId"), userId))
+      .collect();
+
+    // 3️⃣ does any star.snippetId equal the one we passed?
+    return stars.some((star) => star.snippetId === snippetId);
+  },
+});
+
+
+
+
+
+// export const isSnippetStarred = query({
+//   args: {
+//     snippetId: v.id("snippets"),
+//   },
+//   handler: async (ctx, args) => {
+//     const identity = await ctx.auth.getUserIdentity();
+//     if (!identity) return false;
+
+//     const star = await ctx.db
+//       .query("stars")
+//       .withIndex("by_user_id_and_snippet_id")
+//       .filter(
+//         (q) =>
+//           q.eq(q.field("userId"), identity.subject) && q.eq(q.field("snippetId"), args.snippetId)
+//       )
+//       .first();
+    
+//     return !!star;
+//   },
+// });
+
+
+
+
+
+export const isSnippetStarredByUser = query({
+  args: {
+    snippetId: v.id("snippets"),
+    // Remove the currentUserId parameter - we'll use the authenticated user instead
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) return false;
+    
+    // Use the authenticated user's identity directly
+    const userId = identity.subject;
+    
+    const star = await ctx.db
+      .query("stars")
+      .withIndex("by_user_id_and_snippet_id")
+      .filter(
+        (q) =>
+          q.eq(q.field("userId"), identity.subject) && q.eq(q.field("snippetId"), args.snippetId)
+      )
+      .first();
+
+    return !!star;
+  },
+});
+
+
+
+
+
 
 export const getSnippetStarCount = query({
   args: { snippetId: v.id("snippets") },

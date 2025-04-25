@@ -9,7 +9,7 @@ import { useState } from "react";
 // Navigation links data
 const navLinks = [
   { href: "/editor", label: "Code", icon: Code },
-  { href: "/snippets", label: "Snippets", icon: Container },
+  { href: "/snippets", label: "Community", icon: Container },
 ];
 
 // NavLink component for consistent styling

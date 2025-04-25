@@ -111,7 +111,7 @@ function Header() {
               
               <Container className="w-4 h-4 relative z-10 group-hover:text-primary-400 transition-colors duration-300" />
               <span className="text-sm font-medium relative z-10 group-hover:text-white transition-colors duration-300">
-                Snippets
+                Community
               </span>
             </Link>
           </nav>

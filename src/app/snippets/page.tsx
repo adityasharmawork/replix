@@ -68,7 +68,7 @@ function SnippetsPage() {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 text-transparent bg-clip-text mb-6"
                     >
-                        Discover & Share Code Snippets
+                        Discover & Share Code with Community
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -91,7 +91,7 @@ function SnippetsPage() {
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                placeholder="Search snippets by title, language, or author..."
+                                placeholder="Search gists by title, language, or author..."
                                 className="w-full pl-12 pr-4 py-4 bg-zinc-900/80 backdrop-blur-sm text-white
                                 rounded-xl border border-zinc-800/80 hover:border-indigo-500/30 focus:border-indigo-500/50 transition-all duration-200
                                 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
@@ -141,7 +141,7 @@ function SnippetsPage() {
 
                         <div className="ml-auto flex items-center gap-3 mt-3 sm:mt-0">
                             <span className="text-sm text-indigo-300 bg-indigo-500/10 px-3 py-1 rounded-lg border border-indigo-500/20">
-                                {filteredSnippets.length} snippets found
+                                {filteredSnippets.length} contributions found
                             </span>
 
                             {/* View Toggle */}
@@ -202,7 +202,7 @@ function SnippetsPage() {
                             >
                                 <Code className="w-8 h-8 text-indigo-400" />
                             </div>
-                            <h3 className="text-xl font-medium text-white mb-3">No snippets found</h3>
+                            <h3 className="text-xl font-medium text-white mb-3">No contributions found</h3>
                             <p className="text-gray-400 mb-6">
                                 {searchQuery || selectedLanguage
                                     ? "Try adjusting your search query or filters"

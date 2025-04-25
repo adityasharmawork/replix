@@ -162,7 +162,7 @@ function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <Container className="w-5 h-5 text-primary-400" />
-              <span className="text-sm font-medium">Snippets</span>
+              <span className="text-sm font-medium">Community</span>
             </Link>
             
             <div className="pt-2 border-t border-gray-800/30">

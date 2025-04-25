@@ -12,6 +12,7 @@ import ParticlesBackground from "@/components/ParticlesBackground";
 import TypewriterText from "@/components/TypewriterText";
 import CodeShowcase from "@/components/CodeShowcase";
 import AnimatedStats from "@/components/AnimatedStats";
+import LanguagesShowcase from "./_components/LanguagesShowcase";
 
 export default function LandingPage() {
   return (
@@ -73,15 +74,18 @@ export default function LandingPage() {
           </div>
           
           {/* Stats Section */}
-          <div className="max-w-5xl mx-auto mt-24 mb-24">
+          <div id="features" className="mt-8 min-h-[24px]"></div>
+          <div className="max-w-5xl mx-auto mt-32 mb-24">
             <h2 className="text-xl font-bold text-center text-white mb-8">
               Powering the developers of tomorrow
             </h2>
             <AnimatedStats />
           </div>
 
+  
+
           {/* Enterprise Features */}
-          <div id="features" className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 mb-36">
+          <div  className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 mb-44">
             {ENTERPRISE_FEATURES.map((feature, index) => (
               <div
                 key={feature.label}
@@ -107,8 +111,17 @@ export default function LandingPage() {
             ))}
           </div>
 
+
+
+
+          {/* Languages Showcase */}
+          <LanguagesShowcase />
+
+
+
+
           {/* CTA Card */}
-          <div className="relative max-w-4xl mx-auto my-64">
+          <div className="relative max-w-4xl mx-auto my-56">
             <div className="absolute -inset-0.5 bg-white/10 rounded-lg blur-md opacity-50" />
               
             <div className="relative frost-panel overflow-hidden animate-fade-in-slow">
@@ -124,7 +137,7 @@ export default function LandingPage() {
                     <Zap className="w-8 h-8 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-white mb-4">
-                    Lifetime Pro Access for Free
+                    Pro Features for Free
                   </h2>
                   <p className="text-gray-300 text-lg">
                     Unlock the full potential of Elif

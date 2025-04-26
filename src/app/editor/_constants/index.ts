@@ -184,7 +184,7 @@ public class Main {
         System.out.print("Original numbers: ");
         for (int n : numbers) System.out.print(n + " ");
         
-        System.out.print("\nSquared numbers: ");
+        System.out.print("Squared numbers: ");
         for (int n : numbers) System.out.print((n * n) + " ");
     }
 }

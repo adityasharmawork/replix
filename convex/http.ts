@@ -26,8 +26,11 @@ http.route({
             });
         }
 
-        const paload = await request.json();
-        const body = await JSON.stringify(paload);
+        // const paload = await request.json();
+        // const body = await JSON.stringify(paload);
+
+        const body = await request.text();
+        const payload = JSON.parse(body);
 
         const wh = new Webhook(webhookSecret);
         let evt: WebhookEvent;

@@ -30,6 +30,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className="scroll-smooth">
+        <head>
+          <meta name="google-adsense-account" content="ca-pub-4171021998173874" />
+        </head>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col relative`}>
           {/* Modern background with animated gradient and particles */}
           <div className="fixed inset-0 bg-black z-[-3]" />

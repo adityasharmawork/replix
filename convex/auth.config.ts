@@ -2,7 +2,7 @@
 export default {
     providers: [
       {
-        domain: "https://flexible-robin-17.clerk.accounts.dev",
+        domain: "https://clerk.replix.co.in",
         applicationID: "convex",
       },
     ]

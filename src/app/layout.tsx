@@ -31,7 +31,8 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" className="scroll-smooth">
         <head>
-          <meta name="google-adsense-account" content="ca-pub-4171021998173874" />
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4171021998173874"
+            crossOrigin="anonymous"></script>
         </head>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col relative`}>
           {/* Modern background with animated gradient and particles */}

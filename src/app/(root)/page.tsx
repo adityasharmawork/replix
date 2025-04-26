@@ -43,7 +43,7 @@ export default function LandingPage() {
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-4 mb-24">
-              <span className="font-mono">Elif</span> - All in one Online Compiler cum IDE
+              <span className="font-mono">Replix</span> - All in one Online Compiler cum IDE
             </p>
             
             {/* CTA buttons */}
@@ -140,7 +140,7 @@ export default function LandingPage() {
                     Pro Features for Free
                   </h2>
                   <p className="text-gray-300 text-lg">
-                    Unlock the full potential of Elif
+                    Unlock the full potential of Replix
                   </p>
                 </div>
 

@@ -18,7 +18,7 @@ const CodeShowcase = ({
   const codeSnippets: Record<string, string> = {
     javascript: 
 `
-console.log("Welcome to Elif - Code in any language, anytime!");
+console.log("Welcome to Replix - Code in any language, anytime!");
 
 // Example
 const numbers = [1, 2, 3, 4, 5];
@@ -29,7 +29,7 @@ console.log('Squared numbers:', squares);
 
     python:
 `
-print("Welcome to Elif - Code in Python, or any language you love!")
+print("Welcome to Replix - Code in Python, or any language you love!")
 
 # Example
 numbers = [1, 2, 3, 4, 5]
@@ -42,7 +42,7 @@ print("Squared numbers:", squares)
     rust:
 `
 fn main() {
-    println!("Welcome to Elif - Fuel your code with Rust and more!");
+    println!("Welcome to Replix - Fuel your code with Rust and more!");
 
     let numbers = [1, 2, 3, 4, 5];
     let squares: Vec<i32> = numbers.iter().map(|&n| n * n).collect();

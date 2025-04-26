@@ -18,8 +18,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Elif - Code Beyond Limits!",
-  description: "Elif is a community-driven code library that allows you to share, discover, and collaborate on code snippets with ease. Join us today and unlock the power of code sharing!",
+  title: "Replix - Code Beyond Limits!",
+  description: "Replix is a community-driven code library that allows you to share, discover, and collaborate on code snippets with ease. Join us today and unlock the power of code sharing!",
 };
 
 export default function RootLayout({

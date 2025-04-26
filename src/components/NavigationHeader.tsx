@@ -73,7 +73,7 @@ function NavigationHeader() {
                 {/* Text */}
                 <div className="relative">
                   <span className="block text-lg font-semibold text-white">
-                    Elif
+                    Replix
                   </span>
                   <span className="block text-xs text-gray-400 font-medium">
                     Code Beyond Limits!

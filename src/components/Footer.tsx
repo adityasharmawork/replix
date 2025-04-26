@@ -16,12 +16,12 @@ function Footer() {
             <div className="flex items-center gap-2 text-gray-300">
               <Code className="size-4 text-white" />
               <span className="font-medium text-sm text-gray-300">
-                Elif - Code Beyond Limits!
+                Replix - Code Beyond Limits!
               </span>
             </div>
-            <p className="text-gray-500 text-xs text-center md:text-left">
-              © {currentYear} Elif. All rights reserved.
-            </p>
+            {/* <p className="text-gray-500 text-xs text-center md:text-left">
+              © {currentYear} Replix. All rights reserved.
+            </p> */}
           </div>
           
           {/* Links */}

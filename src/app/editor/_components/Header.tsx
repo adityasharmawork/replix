@@ -72,7 +72,7 @@ function Header() {
               <span className="block text-lg font-semibold bg-gradient-to-r 
                 from-primary-400 via-blue-300 to-secondary-400 text-transparent bg-clip-text bg-size-200 
                 group-hover:animate-gradient-x">
-                Elif
+                Replix
               </span>
               <span className="hidden xs:block text-xs text-primary-400/60 font-medium">
                 Code Beyond Limits!

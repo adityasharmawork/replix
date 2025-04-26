@@ -41,7 +41,7 @@ export const LANGUAGE_CONFIG: LanguageConfig = {
 // const sum = numbers.reduce((acc, curr) => acc + curr, 0);
 // console.log('Sum of numbers:', sum);`,
 defaultCode: `
-console.log("Welcome to Elif - Code in any language, anytime!");
+console.log("Welcome to Replix - Code in any language, anytime!");
 
 // Example
 const numbers = [1, 2, 3, 4, 5];
@@ -89,7 +89,7 @@ console.log('Squared numbers:', squares);
 // console.log('Sum of numbers:', math.sum());`,
 
 defaultCode: `
-console.log("Welcome to Elif - Your multi-language coding playground!");
+console.log("Welcome to Replix - Your multi-language coding playground!");
 
 // Example
 const numbers: number[] = [1, 2, 3, 4, 5];
@@ -122,7 +122,7 @@ console.log('Squared numbers:', squares);
 // print(f"Sum of numbers: {numbers_sum}")`,
 
 defaultCode: `
-print("Welcome to Elif - Code in Python, or any language you love!")
+print("Welcome to Replix - Code in Python, or any language you love!")
 
 # Example
 numbers = [1, 2, 3, 4, 5]
@@ -177,7 +177,7 @@ print("Squared numbers:", squares)
 defaultCode: `
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Welcome to Elif - The ultimate cross-language IDE!");
+        System.out.println("Welcome to Replix - The ultimate cross-language IDE!");
 
         // Example
         int[] numbers = {1, 2, 3, 4, 5};
@@ -238,7 +238,7 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("Welcome to Elif - Your go-to place for Go and beyond!")
+    fmt.Println("Welcome to Replix - Your go-to place for Go and beyond!")
 
     // Example
     numbers := []int{1, 2, 3, 4, 5}
@@ -288,7 +288,7 @@ func main() {
 
 defaultCode: `
 fn main() {
-    println!("Welcome to Elif - Fuel your code with Rust and more!");
+    println!("Welcome to Replix - Fuel your code with Rust and more!");
 
     let numbers = [1, 2, 3, 4, 5];
     let squares: Vec<i32> = numbers.iter().map(|&n| n * n).collect();
@@ -349,7 +349,7 @@ defaultCode: `
 using namespace std;
 
 int main() {
-    cout << "Welcome to Elif - Code in C++ and so much more!" << endl;
+    cout << "Welcome to Replix - Code in C++ and so much more!" << endl;
 
     vector<int> numbers = {1, 2, 3, 4, 5};
     cout << "Original numbers: ";
@@ -400,7 +400,7 @@ using System.Linq;
 
 class Program {
     static void Main() {
-        Console.WriteLine("Welcome to Elif - A universal IDE for all coders!");
+        Console.WriteLine("Welcome to Replix - A universal IDE for all coders!");
 
         int[] numbers = {1, 2, 3, 4, 5};
         var squares = numbers.Select(n => n * n).ToArray();
@@ -437,7 +437,7 @@ class Program {
 // puts "Sum of numbers: #{sum}"`,
 
 defaultCode: `
-puts "Welcome to Elif - Code freely in Ruby and beyond!"
+puts "Welcome to Replix - Code freely in Ruby and beyond!"
 
 numbers = [1, 2, 3, 4, 5]
 squares = numbers.map { |n| n ** 2 }
@@ -474,7 +474,7 @@ puts "Squared numbers: #{squares}"
 defaultCode: `
 import Foundation
 
-print("Welcome to Elif - Swift coding meets universal IDE!")
+print("Welcome to Replix - Swift coding meets universal IDE!")
 
 let numbers = [1, 2, 3, 4, 5]
 let squares = numbers.map { $0 * $0 }

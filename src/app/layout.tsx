@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,8 +32,21 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" className="scroll-smooth">
         <head>
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4171021998173874"
-            crossOrigin="anonymous"></script>
+          {/* <!-- Google tag (gtag.js) --> */}
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-S85X4VTTGB"></Script>
+          <Script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag() {
+                dataLayer.push(arguments)
+                }
+              gtag('js', new Date());
+
+              gtag('config', 'G-S85X4VTTGB');
+            `}
+          </Script>
+          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4171021998173874"
+            crossOrigin="anonymous"></Script>
         </head>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col relative`}>
           {/* Modern background with animated gradient and particles */}

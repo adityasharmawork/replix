@@ -1,11 +1,11 @@
-# 🧠 elif – Elevate the Way You Code
+# 🧠 Replix – Elevate the Way You Code
 
 [![Made with ❤️ in Next.js](https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20in-Next.js-000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 
-Welcome to **elif**, your next-generation online IDE built for modern developers.  
-Whether you're a seasoned pro or just getting started, elif gives you a powerful, beautiful, and seamless environment to write, run, and share code with confidence.
+Welcome to **Replix**, your next-generation online IDE built for modern developers.  
+Whether you're a seasoned pro or just getting started, Replix gives you a powerful, beautiful, and seamless environment to write, run, and share code with confidence.
 
-🔗 **Live Deployed Link:** [dub.sh/elif](https://dub.sh/elif)
+🔗 **Live Deployed Link:** [dub.sh/replix](https://dub.sh/replix)
 
 ---
 
@@ -16,6 +16,7 @@ Whether you're a seasoned pro or just getting started, elif gives you a powerful
 - **Authentication:** [Clerk](https://clerk.dev/)
 - **State Management:** [Zustand](https://zustand-demo.pmnd.rs/)
 - **Styling:** [TailwindCSS](https://tailwindcss.com/)
+- **Analytics:** [Google Analytics](https://analytics.google.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Editor:** [Monaco Editor](https://microsoft.github.io/monaco-editor/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
@@ -40,10 +41,13 @@ Supports 10+ programming languages including:
 - Adjustable font sizes for comfortable, distraction-free coding  
 - Personalized coding environment with session persistence
 
-
 ### ✨ Smart Output Handling  
 - Intelligent Success & Error states  
 - Clear, color-coded console feedback
+
+### 💾 Persistent Code Storage  
+- Your code remains intact even after refreshing the page  
+- Write without fear of losing your work
 
 ### 📊 Personal Analytics Dashboard  
 - Track execution history  
@@ -71,7 +75,7 @@ Supports 10+ programming languages including:
 
 ## 🌟 Getting Started
 
-1. Visit [dub.sh/elif](https://dub.sh/elif)
+1. Visit [replix.co.in](https://replix.co.in) | [dub.sh/replix](https://dub.sh/replix)
 2. Sign up using Clerk (GitHub, Google, or Email)
 3. Choose your favorite language & theme
 4. Start writing, executing, and sharing code instantly!

@@ -355,7 +355,7 @@ int main() {
     cout << "Original numbers: ";
     for (int n : numbers) cout << n << " ";
 
-    cout << "\nSquared numbers: ";
+    cout << "Squared numbers: ";
     for (int n : numbers) cout << n * n << " ";
 
     return 0;

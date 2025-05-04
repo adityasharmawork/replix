@@ -6,15 +6,31 @@ import { useMutation } from "convex/react";
 import { motion } from "framer-motion";
 import { Loader2, Play } from "lucide-react";
 import { api } from "../../../../convex/_generated/api";
+import { RefObject } from "react";
+import toast from "react-hot-toast";
 
-function RunButton () {
+function RunButton ({ stdinRef }: { stdinRef: RefObject<HTMLTextAreaElement> }) {
   const { user } = useUser();
   const { runCode, language, isRunning } = useCodeEditorStore();
   const savedExecution = useMutation(api.codeExecutions.saveExecution);
 
   const handleRun = async () => {
-    await runCode();
+    const stdin = stdinRef.current?.value ?? "";
+    await runCode(stdin);
+    // await runCode();
     const result = getExecutionResult();
+
+    if (result?.error) {
+      // Compile/run error: inline panel handles it, but toast adds UX boost
+      toast.error("Error running your code", {  
+        icon: '❌',
+      });
+    } else {
+      toast.success("Code ran successfully", {
+        // icon: '✅',
+        icon: '🎉',
+      });
+    }
 
     if(user && result) {
       await savedExecution({

@@ -48,9 +48,9 @@ import ThemeSelector from "./ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
 import RunButton from "./RunButton";
 import HeaderProfileBtn from "./HeaderProfileBtn";
-import { useState } from "react";
+import { RefObject, useState } from "react";
 
-function Header() {
+function Header({ stdinRef }: { stdinRef: RefObject<HTMLTextAreaElement> }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -89,7 +89,7 @@ function Header() {
           </div>
 
           <SignedIn>
-            <RunButton />
+            <RunButton stdinRef={stdinRef} />
           </SignedIn>
 
           <div className="pl-2 border-l border-gray-800/50">
@@ -120,7 +120,7 @@ function Header() {
         {/* Mobile controls */}
         <div className="flex md:hidden items-center gap-2">
           <SignedIn>
-            <RunButton />
+            <RunButton stdinRef={stdinRef} />
           </SignedIn>
           
           <button 

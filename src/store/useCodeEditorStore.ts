@@ -74,7 +74,7 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
             });
         },
 
-        runCode: async () => {
+        runCode: async (stdin) => {
             const { language, getCode } = get();
             const code = getCode();
 
@@ -86,6 +86,8 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
             set({isRunning: true, error: null, output: ""});
 
             try {
+                // const inputElement = document.getElementById("stdin") as HTMLTextAreaElement | null;
+                // const stdin = inputElement?.value;
                 const runtime = LANGUAGE_CONFIG[language].pistonRuntime;
                 const response = await fetch("https://emkc.org/api/v2/piston/execute", {
                     method: "POST",
@@ -96,6 +98,7 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
                         language: runtime.language,
                         version: runtime.version,
                         files: [{ content: code }],
+                        stdin
                     }),
                 });
 

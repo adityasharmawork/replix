@@ -176,7 +176,7 @@ const ParticlesBackground = () => {
         this.size = Math.random() * 1.5 + 0.5;
         this.speedX = (Math.random() - 0.5) * 0.2;
         this.speedY = (Math.random() - 0.5) * 0.2;
-        this.opacity = Math.random() * 0.5 + 0.1;
+        this.opacity = Math.random() * 0.5 + 0.5;
       }
 
       update(canvasWidth: number, canvasHeight: number) {
@@ -193,7 +193,8 @@ const ParticlesBackground = () => {
       draw(context: CanvasRenderingContext2D) {
         context.beginPath();
         context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        context.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        // context.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        context.fillStyle = `rgba(255, 255, 255, 1)`;
         context.fill();
       }
     }

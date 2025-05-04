@@ -78,6 +78,8 @@ export default {
         'spin-slower': 'spin 40s linear infinite',
         'float': 'float 6s ease-in-out infinite',
         'float-slow': 'float 8s ease-in-out infinite',
+        'float-fast':  'float 4s ease-in-out infinite',       // faster loop
+        'float-big':   'float 8s ease-in-out infinite',       // same speed, bigger drift
         'fade-in': 'fadeIn 1s ease-out forwards',
         'fade-in-slow': 'fadeIn 2s ease-out forwards',
         'slide-up': 'slideUp 0.5s ease-out forwards',

@@ -69,7 +69,7 @@ export default function LandingPage() {
           </div>
           
           {/* Code Showcase */}
-          <div className="max-w-5xl mx-auto mb-40 animate-float-slow">
+          <div className="max-w-5xl mx-auto pt-14 mb-40 animate-float-fast">
             <CodeShowcase />
           </div>
           

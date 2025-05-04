@@ -472,8 +472,6 @@ puts "Squared numbers: #{squares}"
 // print("Sum of numbers: \\(sum)")`,
 
 defaultCode: `
-import Foundation
-
 print("Welcome to Replix - Swift coding meets universal IDE!")
 
 let numbers = [1, 2, 3, 4, 5]

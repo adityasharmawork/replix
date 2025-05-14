@@ -9,7 +9,7 @@ interface InputPanelProps {
 
 export default function InputPanel({ stdinRef }: InputPanelProps) {
   return (
-    <div className="relative h-full flex flex-col mt-2">
+    <div className="relative h-full flex flex-col mt-2 xl:max-w-[34vw] xl:ml-72">
       <div className="relative bg-[#181825] rounded-xl p-3 ring-1 ring-gray-800/50 flex-1 flex flex-col">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">

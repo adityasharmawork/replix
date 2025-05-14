@@ -14,10 +14,10 @@ export default function Home() {
         <Header stdinRef={stdinRef}/>
           
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 flex-1">
-          <div className="flex flex-col md:max-h-[calc(100vh-100px)] md:h-full min-h-[80vh]">
+          <div className="flex flex-col md:max-h-[calc(100vh-100px)] xl:min-w-[64vw] md:h-full min-h-[80vh]">
             <EditorPanel />
           </div>
-          <div className="flex flex-col md:max-h-[calc(100vh-100px)] md:h-full min-h-[50vh]">
+          <div className="flex flex-col md:max-h-[calc(100vh-100px)] max-w[36vw] md:h-full min-h-[50vh]">
             <OutputPanel />
             <InputPanel stdinRef={stdinRef} />
             {/* <textarea id="stdin" className="text-white h-[60vh] bg-slate-800" ref={stdinRef} placeholder="Enter input here" /> */}

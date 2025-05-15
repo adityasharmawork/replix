@@ -38,6 +38,7 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
         error: null,
         editor: null,
         executionResult: null,
+        runTimeMs: null,
         
         getCode: () => get().editor?.getValue() || "",
 
@@ -89,6 +90,7 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
                 // const inputElement = document.getElementById("stdin") as HTMLTextAreaElement | null;
                 // const stdin = inputElement?.value;
                 const runtime = LANGUAGE_CONFIG[language].pistonRuntime;
+                const t0 = performance.now();
                 const response = await fetch("https://emkc.org/api/v2/piston/execute", {
                     method: "POST",
                     headers: {
@@ -101,6 +103,8 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
                         stdin
                     }),
                 });
+                const t1 = performance.now();
+                const runTimeMs = t1 - t0;
 
                 const data = await response.json();
                 console.log(`Data: ${data}`);
@@ -147,6 +151,7 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
                 set({
                     output: output.trim(),
                     error: null,
+                    runTimeMs: runTimeMs,
                     executionResult: {
                         code,
                         output: output.trim(),
@@ -158,6 +163,7 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
                 console.log(`Error running the code: ${error}`);
                 set({
                     error: "Error running the code",
+                    runTimeMs: null,
                     executionResult: {
                         code,
                         output: "",

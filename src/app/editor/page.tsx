@@ -5,6 +5,7 @@ import EditorPanel from "./_components/EditorPanel";
 import Header from "./_components/Header";
 import OutputPanel from "./_components/OutputPanel";
 import InputPanel from "./_components/InputPanel";
+import PerformancePanel from "./_components/PerformancePanel";
 
 export default function Home() {
   const stdinRef = useRef<HTMLTextAreaElement>(null);
@@ -17,9 +18,10 @@ export default function Home() {
           <div className="flex flex-col md:max-h-[calc(100vh-100px)] xl:min-w-[64vw] md:h-full min-h-[80vh]">
             <EditorPanel />
           </div>
-          <div className="flex flex-col md:max-h-[calc(100vh-100px)] max-w[36vw] md:h-full min-h-[50vh]">
+          <div className="flex flex-col md:max-h-[calc(100vh-100px)] md:h-full min-h-[50vh]">
             <OutputPanel />
             <InputPanel stdinRef={stdinRef} />
+            <PerformancePanel />
             {/* <textarea id="stdin" className="text-white h-[60vh] bg-slate-800" ref={stdinRef} placeholder="Enter input here" /> */}
           </div>
         </div>

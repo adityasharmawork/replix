@@ -46,6 +46,7 @@ export interface CodeEditorState {
   fontSize: number;
   editor: Monaco | null;
   executionResult: ExecutionResult | null;
+  runTimeMs: number | null;
 
   setEditor: (editor: Monaco) => void;
   getCode: () => string;

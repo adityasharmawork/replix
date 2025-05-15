@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 
+import { Analytics } from "@vercel/analytics/next";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -87,6 +89,7 @@ export default function RootLayout({
               },
             }}
           />
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>

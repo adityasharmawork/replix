@@ -7,7 +7,8 @@ function PerformancePanel() {
   const runTimeMs = useCodeEditorStore(s => s.runTimeMs);
   
   return (
-    <div className="relative flex flex-col mt-2 xl:max-w-[34vw] xl:ml-72">
+    <div className="relative flex min-h-56 flex-col mt-2 w-full">
+    {/* // <div className="relative flex flex-col mt-2 w-auto md:max-w-lg h-auto ml-56"> */}
       <div className="relative bg-[#181825] rounded-xl p-3 ring-1 ring-gray-800/50 flex-1 flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between mb-2">

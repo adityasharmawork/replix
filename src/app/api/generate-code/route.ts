@@ -26,7 +26,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     }
 
     const enhancedPrompt = `Generate code based on this request: "${prompt}". 
-      Please provide only the code with minimal explanations. 
+      Please provide only the code with no explanations. 
       Include proper formatting, syntax, and error handling where appropriate.`;
 
 

@@ -133,7 +133,7 @@ const AIAssistantPanel: React.FC = () => {
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
-                  placeholder="e.g., Generate a binary search algorithm in C++"
+                  placeholder="e.g., Generate a Dijkstra's Algorithm Code in C++"
                   className="w-full min-h-32 bg-[#1e1e2e] text-gray-300 rounded-lg p-3 
                     ring-1 ring-gray-800/50 focus:ring-primary-400/50 outline-none"
                   required

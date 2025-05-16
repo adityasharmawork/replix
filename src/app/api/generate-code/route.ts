@@ -109,21 +109,16 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     }
 
     const enhancedPrompt = `Generate code based on this request: "${prompt}". 
-Please provide only the code with minimal explanations. 
-Include proper formatting, syntax, and error handling where appropriate.`;
+      Please provide only the code with minimal explanations. 
+      Include proper formatting, syntax, and error handling where appropriate.`;
 
-    console.log('Using model for generateContent:', MODEL_NAME);
-    console.log('Sending request with prompt:', enhancedPrompt);
 
-    // 1. Grab the code model:
     const model: GenerativeModel = genAI.getGenerativeModel({ model: MODEL_NAME });
 
-    // 2. Call generateContent
     const result: GenerateContentResult = await model.generateContent(enhancedPrompt);
     const response = await result.response;
     let code = await response.text();
 
-    // 3. Strip away any markdown fences
     code = code.replace(/```[\w]*\n/g, '').replace(/```$/g, '');
 
     return NextResponse.json({ code }, { status: 200 });

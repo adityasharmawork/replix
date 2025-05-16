@@ -88,7 +88,7 @@ function PerformancePanel() {
 
         {/* Right Part: Metrics or Placeholder */}
         {runTimeMs !== null ? (
-          <div className="flex items-center gap-1 text-sm xl:text-md">
+          <div className="flex items-center gap-1 text-sm xl:text-lg">
             <Clock className="w-2 h-2 xl:w-6 xl:h-6 text-blue-400" />
             <span className="text-blue-400 ml-1" >Execution Wall Time - </span>
             <span className="ml-1 mr-5 font-semibold text-gray-300">{runTimeMs.toFixed(1)} ms</span>

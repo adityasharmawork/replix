@@ -11,7 +11,7 @@ const AIAssistantPanel: React.FC = () => {
   const [generatedCode, setGeneratedCode] = useState<string>("");
   const [error, setError] = useState<string>("");
 
-//   const { setCode } = useCodeEditorStore();
+  const { setCode } = useCodeEditorStore();
 
   const handleGenerateClick = () => {
     setIsModalOpen(true);
@@ -50,12 +50,12 @@ const AIAssistantPanel: React.FC = () => {
     }
   };
 
-//   const applyGeneratedCode = () => {
-//     if (generatedCode) {
-//       setCode(generatedCode);
-//       closeModal();
-//     }
-//   };
+  const applyGeneratedCode = () => {
+    if (generatedCode) {
+      setCode(generatedCode);
+      closeModal();
+    }
+  };
 
   const copyToClipboard = async () => {
     if (generatedCode) {
@@ -206,13 +206,13 @@ const AIAssistantPanel: React.FC = () => {
                 >
                   Cancel
                 </button>
-                {/* <button
+                <button
                   onClick={applyGeneratedCode}
                   className="px-4 py-2 bg-primary-600 text-white rounded-lg 
                     hover:bg-primary-700 transition-colors"
                 >
                   Apply to Editor
-                </button> */}
+                </button>
               </div>
             )}
           </div>

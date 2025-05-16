@@ -665,7 +665,7 @@ Generated Code (only the code block):
     <div className="relative flex flex-col mt-1 h-full w-full">
       <div className="relative h-34 bg-[#181825] rounded-lg p-2 ring-1 ring-gray-800/50 xl:flex xl:items-center justify-between xl:h-16">
         <div className="flex items-center gap-1.5">
-          <div className="ml-4 flex items-center justify-center w-8 h-8 rounded bg-[#1e1e2e] ring-1 ring-gray-800/50">
+          <div className="ml-2 flex items-center justify-center w-8 h-8 rounded bg-[#1e1e2e] ring-1 ring-gray-800/50">
             <Bot className="w-6 h-6 xl:w-7 xl:h-7 text-primary-400 " />
           </div>
           <span className="text-sm font-medium text-gray-300 hidden sm:inline">AI Assistant</span>

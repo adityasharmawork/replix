@@ -22,7 +22,7 @@ export default function Home() {
           <div className="flex flex-col md:max-h-[calc(100vh-100px)] md:h-full min-h-[50vh]">
             <OutputPanel />
             <InputPanel stdinRef={stdinRef} />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 xl:pl-72">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 xl:pl-72">
               <PerformancePanel />
               <AIAssistantPanel />
             </div>

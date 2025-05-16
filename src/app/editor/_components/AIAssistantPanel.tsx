@@ -589,7 +589,7 @@ const AIAssistantPanel: React.FC = () => {
         fullApiPrompt = `You are an AI assistant helping to debug code.
 Language: ${currentLanguage}.
 Task: Analyze the following code and the error description. Provide a corrected version of the code.
-If you provide explanations, clearly separate them from the code block. The primary output should be the corrected code block.
+Do not provide explanations, provide only the corrected code. The primary output should be the corrected code block.
 
 Error Description:
 "${prompt}"

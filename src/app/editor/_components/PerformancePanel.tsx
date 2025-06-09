@@ -13,7 +13,8 @@ function PerformancePanel() {
         {/* Left Part: Panel Icon + Name */}
         <div className="xl:flex xl:items-center gap-1.5"> {/* Adjusted gap */}
           <div className="ml-4 flex items-center justify-center w-8 h-8 rounded bg-[#1e1e2e] ring-1 ring-gray-800/50">
-            <Gauge className="w-6 h-6 xl:w-8 xl:h-8 text-primary-400" /> {/* Smaller icon */}
+            {/* <Gauge className="w-6 h-6 xl:w-8 xl:h-8 text-primary-400" /> Smaller icon */}
+            <Gauge className="w-6 h-6 xl:w-8 xl:h-8 text-white" /> {/* Smaller icon */}
           </div>
           <span className="text-xs xl:text-sm font-medium text-gray-300 hidden sm:inline">Performance</span>
           <span className="text-xs xl:text-sm font-medium text-gray-300 sm:hidden">Performance</span> {/* Shorter for small screens */}

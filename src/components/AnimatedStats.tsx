@@ -42,7 +42,7 @@ const AnimatedStats = () => {
       value: 75,
       label: "Countries",
       suffix: "+",
-      duration: 2000
+      duration: 3000
     },
     {
       icon: <Zap className="w-6 h-6 text-white" />,

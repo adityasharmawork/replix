@@ -103,7 +103,7 @@ fn main() {
           <TypewriterText 
             key={key}
             text={codeToShow} 
-            speed={5} 
+            speed={15} 
             delay={300}
             className="text-white" 
           />

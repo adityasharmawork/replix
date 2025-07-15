@@ -82,8 +82,8 @@ const AnimatedStats = () => {
 
   return (
     <div ref={containerRef} className="flex flex-col gap-6 py-8 mb-44">
-      <div className="px-32 mb-4" >
-        <div className="grid grid-cols-2 gap-6">
+      <div className="md:px-32 md:mb-4" >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {stats.slice(0, 2).map((stat, index) => (
             <AnimatedStatItem
               key={index}

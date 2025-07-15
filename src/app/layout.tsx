@@ -21,8 +21,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Replix - Code Beyond Limits!",
-  description: "Replix is a community-driven code library that allows you to share, discover, and collaborate on code snippets with ease. Join us today and unlock the power of code sharing!",
+  title: "Replix IDE - Code Beyond Limits!",
+  description: "Replix IDE is a community-driven code library that allows you to share, discover, and collaborate on code snippets with ease. Join us today and unlock the power of code sharing!",
 };
 
 export default function RootLayout({

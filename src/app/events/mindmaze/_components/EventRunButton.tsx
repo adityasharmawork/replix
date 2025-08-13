@@ -20,7 +20,7 @@ function EventRunButton ({ testInput }: { testInput: string }) {
     await runCode(stdin);
     // await runCode();
     const result = getExecutionResult();
-    console.log(result);
+    // console.log(result);
 
     if (result?.error) {
       // Compile/run error: inline panel handles it, but toast adds UX boost

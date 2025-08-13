@@ -112,11 +112,11 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
                         language: runtime.language,
                         version: runtime.version,
                         files: [{ content: code }],
-                        stdin,
-                        compile_timeout: 10000,
-                        run_timeout: 50,
-                        compile_memory_limit: -1,
-                        run_memory_limit: -1
+                        stdin
+                        // compile_timeout: 10000,
+                        // run_timeout: 50,
+                        // compile_memory_limit: -1,
+                        // run_memory_limit: -1
                         // ...(run_timeout && { run_timeout }),
                         // ...(run_memory_limit && { run_memory_limit }),
                     }),

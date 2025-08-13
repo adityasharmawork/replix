@@ -50,8 +50,8 @@ export function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
     };
 
     try {
-        // const response = await fetch('https://replix-mindmaze-backend.onrender.com/api/reviews/save', {
-        const response = await fetch('http://localhost:8080/api/reviews/save', {
+        const response = await fetch('https://replix-mindmaze-backend.onrender.com/api/reviews/save', {
+        // const response = await fetch('http://localhost:8080/api/reviews/save', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(reviewData),
@@ -147,7 +147,7 @@ export function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
                     </button>
                      <button onClick={handleClose}
                         className="w-full text-sm text-gray-500 hover:text-gray-400">
-                        Missed something? Back to Coding ->
+                        Missed something? Back to Coding
                     </button>
                 </div>
               </>

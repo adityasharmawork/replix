@@ -112,7 +112,13 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
                         language: runtime.language,
                         version: runtime.version,
                         files: [{ content: code }],
-                        stdin
+                        stdin,
+                        compile_timeout: 10000,
+                        run_timeout: 50,
+                        compile_memory_limit: -1,
+                        run_memory_limit: -1
+                        // ...(run_timeout && { run_timeout }),
+                        // ...(run_memory_limit && { run_memory_limit }),
                     }),
                 });
                 const t1 = performance.now();
@@ -120,6 +126,8 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
 
                 const data = await response.json();
                 console.log(`Data: ${data}`);
+                console.log("Data:", JSON.stringify(data, null, 2));
+
 
                 // Handle API level errors
                 if(data.message) {

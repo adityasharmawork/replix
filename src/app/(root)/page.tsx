@@ -2,7 +2,7 @@
 // import { ConvexHttpClient } from "convex/browser";
 import NavigationHeader from "@/components/NavigationHeader";
 import { ENTERPRISE_FEATURES, FEATURES } from "./_constants";
-import { Code, ExternalLink, Star, Terminal, Zap } from "lucide-react";
+import { ArrowRight, Calendar, Code, ExternalLink, Star, Terminal, Zap } from "lucide-react";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import FeatureCategory from "./_components/FeatureCategory";
 import FeatureItem from "./_components/FeatureItem";
@@ -13,6 +13,7 @@ import TypewriterText from "@/components/TypewriterText";
 import CodeShowcase from "@/components/CodeShowcase";
 import AnimatedStats from "@/components/AnimatedStats";
 import LanguagesShowcase from "./_components/LanguagesShowcase";
+import Link from "next/link";
 
 export default function LandingPage() {
   return (
@@ -116,6 +117,45 @@ export default function LandingPage() {
 
           {/* Languages Showcase */}
           <LanguagesShowcase />
+
+
+
+          {/* ======================================= */}
+          {/* NEW REPLIX EVENTS SECTION          */}
+          {/* ======================================= */}
+          <div className="max-w-4xl mx-auto my-40 text-center animate-fade-in">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Step into the Arena
+            </h2>
+            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              Explore Competitive Programming events, test your skills, and climb the leaderboards.
+            </p>
+            <Link 
+                href="/events"
+                className="group relative block frost-panel p-8 rounded-2xl overflow-hidden hover-glow"
+            >
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="flex items-center gap-6 text-left">
+                        <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-zinc-900 flex items-center justify-center ring-1 ring-zinc-800">
+                            <Calendar className="w-8 h-8 text-white" />
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">Replix Events</h3>
+                            <p className="text-gray-400 mt-1">
+                                Your gateway to all official competitions.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2 text-white font-medium transition-transform group-hover:scale-105">
+                        <span>View All Events</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </div>
+                </div>
+            </Link>
+          </div>
+          {/* ======================================= */}
+          {/* END OF NEW SECTION            */}
+          {/* ======================================= */}
 
 
 

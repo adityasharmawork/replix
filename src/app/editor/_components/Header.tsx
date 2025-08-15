@@ -41,7 +41,7 @@
 // import { ConvexHttpClient } from "convex/browser";
 // import { api } from "../../../../convex/_generated/api";
 import Link from "next/link";
-import { Code, Container, Menu, X } from "lucide-react";
+import { Calendar, Code, Container, Menu, X } from "lucide-react";
 import { SignedIn } from "@clerk/nextjs";
 import ThemeSelector from "./ThemeSelector";
 // import LanguageSelector from "./LanguageSelector";
@@ -98,6 +98,22 @@ function Header({ stdinRef }: { stdinRef: RefObject<HTMLTextAreaElement> }) {
 
           {/* Navigation links */}
           <nav className="hidden lg:flex items-center ml-2">
+            <Link
+              href="/events"
+              className="relative group flex items-center gap-2 px-3 py-1.5 rounded-lg text-gray-200 
+                hover:text-white transition-all duration-300 overflow-hidden"
+            >
+              {/* Background and border effects */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-primary-600/10 rounded-lg transition-opacity duration-300" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 
+                bg-gradient-to-r from-primary-500/20 to-secondary-500/20 rounded-lg blur-md transition-opacity duration-300" />
+              <div className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left h-[1px] bottom-0 bg-gradient-to-r from-primary-400 to-secondary-400 transition-transform duration-300" />
+              
+              <Calendar className="w-4 h-4 relative z-10 group-hover:text-primary-400 transition-colors duration-300" />
+              <span className="text-sm font-medium relative z-10 group-hover:text-white transition-colors duration-300">
+                Events
+              </span>
+            </Link>
             <Link
               href="/snippets"
               className="relative group flex items-center gap-2 px-3 py-1.5 rounded-lg text-gray-200 

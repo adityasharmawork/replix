@@ -2,13 +2,14 @@
 
 import HeaderProfileBtn from "@/app/editor/_components/HeaderProfileBtn";
 import { SignedOut } from "@clerk/nextjs";
-import { Code, Container, LucideIcon, Menu, X } from "lucide-react";
+import { Calendar, Code, Container, LucideIcon, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 // Navigation links data
 const navLinks = [
   { href: "/editor", label: "Code", icon: Code },
+  { href: "/events", label: "Events", icon: Calendar },
   { href: "/snippets", label: "Community", icon: Container },
 ];
 

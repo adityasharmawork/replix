@@ -172,6 +172,16 @@ function Header({ stdinRef }: { stdinRef: RefObject<HTMLTextAreaElement> }) {
             </div>
             
             <Link
+              href="/events"
+              className="relative flex items-center gap-2 p-3 rounded-lg text-gray-200 
+                bg-dark-300/80 hover:bg-primary-600/10 border border-gray-800/30 hover:border-primary-500/30"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <Calendar className="w-5 h-5 text-primary-400" />
+              <span className="text-sm font-medium">Events</span>
+            </Link>
+
+            <Link
               href="/snippets"
               className="relative flex items-center gap-2 p-3 rounded-lg text-gray-200 
                 bg-dark-300/80 hover:bg-primary-600/10 border border-gray-800/30 hover:border-primary-500/30"

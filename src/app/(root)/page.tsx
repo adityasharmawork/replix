@@ -14,6 +14,8 @@ import CodeShowcase from "@/components/CodeShowcase";
 import AnimatedStats from "@/components/AnimatedStats";
 import LanguagesShowcase from "./_components/LanguagesShowcase";
 import Link from "next/link";
+import VisionSection from "./_components/VisionSection";
+import MissionSection from "./_components/MissionSection";
 
 export default function LandingPage() {
   return (
@@ -117,6 +119,30 @@ export default function LandingPage() {
 
           {/* Languages Showcase */}
           <LanguagesShowcase />
+
+
+
+
+          {/* ======================================= */}
+          {/* VISION & MISSION SECTION              */}
+          {/* ======================================= */}
+          {/* <div className="max-w-6xl mx-auto my-40 animate-fade-in">
+            <div className="grid md:grid-cols-2 gap-8">
+              <VisionSection />
+              <MissionSection />
+            </div>
+          </div> */}
+
+          <VisionSection />
+          <MissionSection />
+
+
+          {/* ======================================= */}
+          {/* END OF NEW SECTION                    */}
+          {/* ======================================= */}
+
+
+
 
 
 

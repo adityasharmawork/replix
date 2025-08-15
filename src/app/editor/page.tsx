@@ -18,7 +18,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 flex-1">
           {/* <div className="flex flex-col md:max-h-[calc(100vh-200px)] xl:min-w-[64vw] md:h-full "> */}
           {/* <div className="flex flex-col md:max-h-[calc(100vh-110px)] xl:min-w-[64vw] "> */}
-          <div className="flex flex-col min-h-[50vh] md:h-full md:max-h-[calc(100vh-110px)] xl:min-w-[64vw]">
+          <div className="flex flex-col min-h-[80vh] md:h-full md:max-h-[calc(100vh-110px)] xl:min-w-[64vw]">
             <EditorPanel />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
               <PerformancePanel />

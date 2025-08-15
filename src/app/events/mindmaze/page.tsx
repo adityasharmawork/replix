@@ -88,7 +88,7 @@ export default function MindMazeLandingPage() {
         </SignedIn>
         
         <SignedOut>
-          <div className="ml-44 mt-8">
+          <div className="ml-24 sm:ml-44 mt-8">
             <LoginButton />
           </div>
         </SignedOut>

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Star, MessageSquare, CheckCircle, Loader2 } from "lucide-react";
 import toast from "react-hot-toast";
+import { useUser } from "@clerk/nextjs";
 
 // New tags focused on platform experience
 const experienceTags = ["Amazing", "Smooth", "Intuitive", "Feature Suggestion", "Report Bug"];
@@ -20,6 +21,13 @@ export function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
   const [comment, setComment] = useState("");
   const [step, setStep] = useState<'review' | 'submitted'>('review');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const { user } = useUser();
+
+  // const email = user?.primaryEmailAddress?.emailAddress;
+  // const name = user?.fullName;
+  // console.log(email);
+  // console.log(name);
 
   const handleTagClick = (tag: string) => {
     setSelectedTags(prev =>
@@ -41,8 +49,13 @@ export function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
   };
   
   const handleSubmit = async () => {
+    // console.log(email);
+    // console.log(name);
+    
     setIsSubmitting(true);
     const reviewData = {
+        email: user?.primaryEmailAddress?.emailAddress,
+        name: user?.fullName,
         rating,
         tags: selectedTags,
         comment,

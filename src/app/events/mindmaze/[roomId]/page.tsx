@@ -109,6 +109,8 @@ import { useFullscreen } from '../hooks/useFullscreen';
 import { Toaster } from 'react-hot-toast';
 import Watermark from '../_components/Watermark';
 import LoginButton from '@/components/LoginButton';
+import NewEventOutputPanel from '../_components/NewEventOutputPanel';
+import NewExpectedOutputPanel from '../_components/NewExpectedOutputPanel';
 
 export default function RoomPage() {
   const params = useParams();
@@ -204,14 +206,48 @@ export default function RoomPage() {
         />
 
         { isFullscreen ? (
-          <>
+        //   <>
+        //   <Watermark text={`${userEmail} - ${new Date().toLocaleString()}`} />
+        //     <div className="w-full mx-auto px-2 py-2 flex-1 flex flex-col">
+        //   {/* <Header stdinRef={stdinRef} /> */}
+        //   <EventHeader testInput={room.testInput}/>
+            
+        //   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 flex-1">
+        //     <div className="flex flex-col md:max-h-[calc(100vh-110px)] xl:min-w-[64vw]">
+        //       <QuestionPanel 
+        //         roomId={roomId}
+        //         question={room.title}
+        //         difficulty={room.difficulty}
+        //         tags={room.tags}
+        //         description={room.description}
+        //         inputFormat={room.inputFormat}
+        //         outputFormat={room.outputFormat}
+        //         examples={room.examples}
+        //         timeLimit={room.timeLimit}
+        //         memoryLimit={room.memoryLimit}
+        //       />
+        //       <EditorPanel/>
+        //     </div>
+        //     <div className="flex flex-col md:max-h-[calc(100vh-100px)] md:h-full min-h-[50vh]">
+        //       <EventOutputPanel expectedOutput={room.expectedOutput}/>
+        //       <ExpectedOutputPanel expectedOutput={room.expectedOutput}/>
+        //       {/* <InputPanel stdinRef={stdinRef} /> */}
+        //       <div className="max-h-6 pl-36 ml-36 p-1 mb-7">
+        //         <PerformancePanel />
+        //       </div>
+        //     </div>
+        //   </div>
+        // </div>
+        // </>
+
+        <>
           <Watermark text={`${userEmail} - ${new Date().toLocaleString()}`} />
             <div className="w-full mx-auto px-2 py-2 flex-1 flex flex-col">
           {/* <Header stdinRef={stdinRef} /> */}
           <EventHeader testInput={room.testInput}/>
             
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 flex-1">
-            <div className="flex flex-col md:max-h-[calc(100vh-110px)] xl:min-w-[64vw]">
+            <div className="flex flex-col md:max-h-[calc(100vh-110px)] xl:min-w-[32vw]">
               <QuestionPanel 
                 roomId={roomId}
                 question={room.title}
@@ -224,19 +260,46 @@ export default function RoomPage() {
                 timeLimit={room.timeLimit}
                 memoryLimit={room.memoryLimit}
               />
-              <EditorPanel/>
+              {/* <EditorPanel/> */}
+              {/* <div className="grid md:grid-cols-2 gap-3 flex-1 w-full xl:min-w-[32vw] min-h-0">
+                <NewEventOutputPanel expectedOutput={room.expectedOutput}/>
+                <NewExpectedOutputPanel expectedOutput={room.expectedOutput}/>
+              </div> */}
+
+              {/* <div className="grid md:grid-cols-2 gap-3 flex-1 w-full xl:min-w-[32vw]">
+                <NewEventOutputPanel expectedOutput={room.expectedOutput} />
+                <NewExpectedOutputPanel expectedOutput={room.expectedOutput} />
+              </div> */}
+
+              <div className="grid md:grid-cols-2 gap-3 flex-1 w-full xl:min-w-[32vw] min-h-0">
+                <div className="flex flex-col min-h-0 overflow-y-auto rounded-lg bg-[#181825] p-2">
+                  <NewEventOutputPanel expectedOutput={room.expectedOutput} />
+                </div>
+                <div className="flex flex-col min-h-0 overflow-y-auto rounded-lg bg-[#181825] p-2">
+                  <NewExpectedOutputPanel expectedOutput={room.expectedOutput} />
+                </div>
+              </div>
+
+
+              {/* <div className="max-h-6 pl-36 ml-36 p-1 mb-7"> */}
+                {/* <PerformancePanel /> */}
+              {/* </div> */}
+
             </div>
             <div className="flex flex-col md:max-h-[calc(100vh-100px)] md:h-full min-h-[50vh]">
-              <EventOutputPanel expectedOutput={room.expectedOutput}/>
-              <ExpectedOutputPanel expectedOutput={room.expectedOutput}/>
+              <EditorPanel/>
+              {/* <EventOutputPanel expectedOutput={room.expectedOutput}/>
+              <ExpectedOutputPanel expectedOutput={room.expectedOutput}/> */}
               {/* <InputPanel stdinRef={stdinRef} /> */}
-              <div className="max-h-6 pl-36 ml-36 p-1 mb-7">
+              <div className="max-h-6  p-1 mb-7">
                 <PerformancePanel />
               </div>
             </div>
           </div>
         </div>
         </>
+
+
         ) : (
             <div className="w-full h-screen flex flex-col items-center justify-center text-center p-4">
             <MonitorPlay className="w-16 h-16 text-yellow-400 mb-4" />

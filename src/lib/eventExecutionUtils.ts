@@ -2,7 +2,7 @@
 export async function getTestCasesPassedCount(problemData: any) {
     const { title, description, testInput, actualOutput, expectedOutput, testCasesCount } = problemData;
 
-    const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY_NEW;
+    const GEMINI_API_KEY = process.env.GEMINI_API_KEY_NEW;
     if (!GEMINI_API_KEY) {
         console.error("Gemini API Key is not configured in .env.local");
         return null;

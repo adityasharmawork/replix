@@ -22,17 +22,18 @@ export default function LearningHero({ onExplore }: { onExplore: () => void }) {
               <a href="/learning/projects" className="px-5 py-3 ring-1 ring-white/20 rounded-xl text-white hover:bg-white/5">Guided Projects</a>
             </div>
 
-            <div className="mt-8 grid grid-cols-3 gap-4 max-w-sm mx-auto lg:mx-0">
+            {/* Fixed: removed the sm:max-w-sm cap and avoided break-words so "Interactive" doesn't split */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-full mx-auto lg:mx-0">
               <div className="p-4 bg-white/4 rounded-xl text-center">
-                <div className="text-2xl font-bold">10+</div>
+                <div className="text-xl sm:text-2xl font-bold leading-tight">10+</div>
                 <div className="text-xs text-gray-300">Languages</div>
               </div>
               <div className="p-4 bg-white/4 rounded-xl text-center">
-                <div className="text-2xl font-bold">100+</div>
+                <div className="text-xl sm:text-2xl font-bold leading-tight">100+</div>
                 <div className="text-xs text-gray-300">Lessons</div>
               </div>
               <div className="p-4 bg-white/4 rounded-xl text-center">
-                <div className="text-2xl font-bold">Interactive</div>
+                <div className="text-xl sm:text-2xl font-bold leading-tight break-normal">Interactive</div>
                 <div className="text-xs text-gray-300">Editor & Runner</div>
               </div>
             </div>
@@ -44,7 +45,6 @@ export default function LearningHero({ onExplore }: { onExplore: () => void }) {
               <pre className="bg-black/80 rounded-md p-3 text-xs font-mono text-white overflow-auto">{`// JavaScript — Hello World
 console.log('Hello Replix Learning');`}</pre>
               <div className="mt-4 flex gap-2">
-                {/* <button className="px-4 py-2 bg-white text-black rounded-lg">Open Editor</button> */}
                 <a href="/editor" target="_blank" className="px-4 py-2 bg-white text-black rounded-lg">Open Editor</a>
                 <button onClick={onExplore} className="px-4 py-2 ring-1 ring-white/10 rounded-lg text-white">Preview</button>
               </div>

@@ -16,6 +16,7 @@ import LanguagesShowcase from "./_components/LanguagesShowcase";
 import Link from "next/link";
 import VisionSection from "./_components/VisionSection";
 import MissionSection from "./_components/MissionSection";
+import LearningHero from "./_components/LearningHeroSection";
 
 export default function LandingPage() {
   return (
@@ -184,6 +185,7 @@ export default function LandingPage() {
           {/* ======================================= */}
 
 
+          <LearningHero />
 
 
           {/* CTA Card */}

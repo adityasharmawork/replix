@@ -268,10 +268,10 @@ export default function LessonViewer({ course, onComplete, activeIdx, onChangeLe
     let language: string = (course?.lang === "C++") ? "cpp" : course.lang.toLowerCase();
 
     localStorage.setItem("editor-language", language);
-    localStorage.setItem(`editor-language-${language}`, lesson.code);
+    localStorage.setItem(`editor-code-${language}`, lesson.code);
 
     console.log(localStorage.getItem("editor-language"));
-    console.log(localStorage.getItem(`editor-language-${language}`));
+    console.log(localStorage.getItem(`editor-code-${language}`));
 
     // redirect("/editor");
     window.open("/editor", "_blank");

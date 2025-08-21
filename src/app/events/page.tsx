@@ -142,7 +142,7 @@ const sampleEvents: Event[] = [
     description:
       "A competitive programming arena to test your problem-solving skills and algorithmic knowledge.",
     href: "/events/mindmaze",
-    status: "Upcoming",
+    status: "Ended",
     tags: ["Competitive Programming", "Algorithms", "Data Structures", "DSA"],
     // date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 14).toISOString(),
     date: "20 Aug, 2025, 01:00 pm",

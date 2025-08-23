@@ -326,7 +326,7 @@ export default function LandingPage() {
 
 
 
-          {/* <FounderSection /> */}
+          <FounderSection />
 
 
 

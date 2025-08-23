@@ -2,9 +2,11 @@
 
 import HeaderProfileBtn from "@/app/editor/_components/HeaderProfileBtn";
 import { SignedOut } from "@clerk/nextjs";
-import { Calendar, Code, Container, LucideChartColumnIncreasing, LucideIcon, Menu, X } from "lucide-react";
+import { Calendar, Code, Container, LucideChartColumnIncreasing, LucideIcon, Menu, Star, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+
+const GITHUB_REPO = "https://github.com/adityasharmawork/replix";
 
 // Navigation links data
 const navLinks = [
@@ -101,6 +103,23 @@ function NavigationHeader() {
               <SignedOut>
                 {/* You can optionally show a SignIn button or message here */}
               </SignedOut>
+
+              {/* GitHub Star Button - Desktop */}
+              <a
+                href={GITHUB_REPO}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Star Replix on GitHub"
+                className="hidden md:inline-flex items-center gap-3 px-4 py-2 rounded-md bg-white/5 ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/30 transition-all duration-300 transform  group"
+                >
+                <Star className="w-5 h-5 text-white group-hover:animate-pulse" />
+                <div className="text-left">
+                <div className="text-sm font-medium">Star on GitHub</div>
+                <div className="text-[11px] text-gray-400 -mt-0.5">If Replix helped you, give us a ⭐</div>
+                </div>
+              </a>
+
+
               <HeaderProfileBtn />
 
               {/* Mobile menu button */}
@@ -132,6 +151,21 @@ function NavigationHeader() {
                 onClick={closeMobileMenu}
               />
             ))}
+
+            {/* Mobile GitHub Star link */}
+            <a
+            href={GITHUB_REPO}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Star Replix on GitHub"
+            className="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-300 hover:text-white transition-all duration-300"
+            onClick={closeMobileMenu}
+            >
+            <Star className="w-4 h-4" />
+            <div className="text-sm font-medium">Star Replix on GitHub</div>
+            </a>
+
+
           </div>
         </div>
       )}

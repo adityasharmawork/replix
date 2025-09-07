@@ -319,12 +319,11 @@ int main() {
         printf("%d ", numbers[i]);
     }
 
-    printf("\nSquared numbers: ");
+    printf("Squared numbers: ");
     for (int i = 0; i < size; i++) {
         printf("%d ", numbers[i] * numbers[i]);
     }
-
-    printf("\n");
+        
     return 0;
 }
 

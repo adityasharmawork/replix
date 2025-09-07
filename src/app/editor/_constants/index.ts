@@ -311,7 +311,7 @@ defaultCode: `
 int main() {
     printf("Welcome to Replix - Code in C and so much more!");
 
-    int numbers[] = {1, 2, 3, 4, 5};
+    int numbers[] = {1, 2, 3};
     int size = sizeof(numbers) / sizeof(numbers[0]);
 
     printf("Original numbers: ");

@@ -309,8 +309,22 @@ defaultCode: `
 #include <stdio.h>
 
 int main() {
-    printf("Hello from C!");
+    printf("Welcome to Replix - Code in C and so much more!\n");
 
+    int numbers[] = {1, 2, 3, 4, 5};
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+    printf("Original numbers: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", numbers[i]);
+    }
+
+    printf("\nSquared numbers: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", numbers[i] * numbers[i]);
+    }
+
+    printf("\n");
     return 0;
 }
 

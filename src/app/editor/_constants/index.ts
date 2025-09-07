@@ -299,6 +299,23 @@ fn main() {
 
 `
   },
+  c: {
+    id: "c",
+    label: "C",
+    logoPath: "/c.png",
+    pistonRuntime: { language: "c", version: "10.2.0" },
+    monacoLanguage: "c",
+defaultCode: `
+#include <stdio.h>
+
+int main() {
+    printf("Hello from C!");
+
+    return 0;
+}
+
+`
+  },
   cpp: {
     id: "cpp",
     label: "C++",

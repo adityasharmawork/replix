@@ -309,7 +309,7 @@ defaultCode: `
 #include <stdio.h>
 
 int main() {
-    printf("Welcome to Replix - Code in C and so much more!\n");
+    printf("Welcome to Replix - Code in C and so much more!");
 
     int numbers[] = {1, 2, 3, 4, 5};
     int size = sizeof(numbers) / sizeof(numbers[0]);
@@ -323,7 +323,7 @@ int main() {
     for (int i = 0; i < size; i++) {
         printf("%d ", numbers[i] * numbers[i]);
     }
-        
+
     return 0;
 }
 

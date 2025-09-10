@@ -3,6 +3,8 @@
 import React, { useState, FormEvent, useEffect } from "react";
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import { Bot, X, Copy, Code, Sparkles, Loader2, ShieldAlert, Wrench } from "lucide-react"; // Added Wrench
+import { SignedIn, SignedOut } from "@clerk/nextjs";
+import LoginButton from "@/components/LoginButton";
 
 const AIAssistantPanel: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -232,7 +234,8 @@ Generated Code (only the code block):
                   />
                 </div>
                 <div className="flex justify-end">
-                  <button
+                  <SignedIn>
+                    <button
                     type="submit"
                     disabled={isGenerating}
                     className={`flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white 
@@ -241,19 +244,25 @@ Generated Code (only the code block):
                         ? "bg-red-600 hover:bg-red-700" 
                         : "bg-blue-600 hover:bg-blue-700"
                       }`}
-                  >
-                    {isGenerating ? (
-                      <>
-                        <Loader2 className="w-5 h-5 animate-spin" />
-                        {aiActionType === "fix" ? "Analyzing..." : "Generating..."}
-                      </>
-                    ) : (
-                      <>
-                        {aiActionType === "fix" ? <Wrench className="w-5 h-5" /> : <Sparkles className="w-5 h-5" />}
-                        {aiActionType === "fix" ? "Suggest Fix with AI" : "Generate with AI"}
-                      </>
-                    )}
-                  </button>
+                    >
+                      {isGenerating ? (
+                        <>
+                          <Loader2 className="w-5 h-5 animate-spin" />
+                          {aiActionType === "fix" ? "Analyzing..." : "Generating..."}
+                        </>
+                      ) : (
+                        <>
+                          {aiActionType === "fix" ? <Wrench className="w-5 h-5" /> : <Sparkles className="w-5 h-5" />}
+                          {aiActionType === "fix" ? "Suggest Fix with AI" : "Generate with AI"}
+                        </>
+                      )}
+                    </button>
+                  </SignedIn>
+
+                  <SignedOut>
+                    <LoginButton />
+                  </SignedOut>
+                  
                 </div>
               </form>
 

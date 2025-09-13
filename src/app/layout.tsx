@@ -20,10 +20,138 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+// export const metadata: Metadata = {
+//   title: "Replix IDE - Code Beyond Limits!",
+//   description: "Replix IDE is a community-driven code library that allows you to share, discover, and collaborate on code snippets with ease. Join us today and unlock the power of code sharing!",
+// };
+
+
+
+
+// src/app/layout.tsx
+
+const SITE_URL = "https://replix.co.in";
+const SITE_NAME = "Replix IDE";
+const DEFAULT_TITLE = "Replix IDE — Best Online Compiler & Coding Platform";
+
 export const metadata: Metadata = {
-  title: "Replix IDE - Code Beyond Limits!",
-  description: "Replix IDE is a community-driven code library that allows you to share, discover, and collaborate on code snippets with ease. Join us today and unlock the power of code sharing!",
+  title: {
+    default: DEFAULT_TITLE,
+    template: "%s | Replix IDE - Code Beyond Limits!"
+  },
+  description:
+    "Replix IDE is a community-driven code library that allows you to share, discover, and collaborate on code snippets with ease. Join us today and unlock the power of code sharing! Replix (replix.co.in) — All-in-one online IDE & compiler for C, C++, Java, Python, JavaScript, TypeScript, Go, Rust, C#, Ruby, Swift and more. Build, run, debug, share code, join competitive programming events, host contests, and learn with bite-sized lessons — now with AI-assisted judging, auto-debugging, embedded code snippets and progress tracking. Host DSA/CP contests, share code gists, learn with 100+ bite-sized lessons, track progress, and accelerate development with AI-powered code generation and debugging.",
+  keywords: [
+  "online compiler",
+  "online ide",
+  "Replix",
+  "C",
+  "C compiler",
+  "C++",
+  "C++ compiler",
+  "Python",
+  "Java",
+  "Python online",
+  "Java online",
+  "Python Compiler",
+  "Java Compiler",
+  "JavaScript",
+  "TypeScript",
+  "Rust",
+  "Go",
+  "Golang",
+  "C#",
+  "Ruby",
+  "Swift",
+  "coding",
+  "programming",
+  "competitive programming",
+  "CP",
+  "DSA",
+  "data structures and algorithms",
+  "coding contests",
+  "host coding contest",
+  "judge platform",
+  "AI judging",
+  "code sharing",
+  "code snippets",
+  "learn to code",
+  "coding lessons",
+  "practice coding",
+  "debugging",
+  "generate code with AI",
+  "online IDE for students",
+  "multilanguage IDE",
+  "repl",
+  "coding platform",
+  "code collaboration",
+  "cloud compiler",
+  "CP contests",
+  "coding events",
+  "host competitions",
+  "AI coding",
+  "code generation",
+  "online coding tool",
+  "coding community",
+  "developer tools",
+  "IDE online",
+  "practice problems",
+  "contest hosting",
+  "automated judging",
+  "coding bootcamp",
+  "Code Editor",
+  "coding competitions",
+  "host events",
+  "code debugging",
+  "Vibe Coding",
+  "Best Online Coding Tool"
+  ],
+  applicationName: "Replix",
+  authors: [{ name: "Aditya Sharma", url: "https://replix.co.in" }],
+  openGraph: {
+    title: DEFAULT_TITLE,
+    description:
+      "Replix — Multi-language online IDE & compiler, community code-sharing, competitive events with AI judging, and a practice-first learning platform for DSA, CP and real-world coding.",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    // images: [
+    //   {
+    //     url: (process.env.NEXT_PUBLIC_OG_IMAGE || `${SITE_URL}/og.png`),
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Replix — Online IDE, Compiler & Coding Platform"
+    //   }
+    // ],
+    locale: "en_US",
+    type: "website"
+  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: DEFAULT_TITLE,
+  //   description:
+  //     "Replix — Online IDE & Compiler. Build, run, debug, share code, host contests, and learn with AI-assisted tools and bite-sized lessons.",
+  //   creator: "@AdityaSharma056",
+  //   images: [(process.env.NEXT_PUBLIC_OG_IMAGE || `${SITE_URL}/og.png`)]
+  // },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  metadataBase: new URL(SITE_URL),
 };
+
+
+
+
+
 
 export default function RootLayout({
   children,

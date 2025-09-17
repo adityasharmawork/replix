@@ -116,7 +116,7 @@ export default function RoomPage() {
   const params = useParams();
   const roomId = params.roomId as string;
 
-  const status:any = "Ended";
+  const status:any = "Active";
 
 //   const stdinRef = useRef<HTMLTextAreaElement>(null);
   

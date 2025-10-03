@@ -377,7 +377,7 @@ export default function EventsPage() {
 
             
             {/* Organizer CTA card */}
-            {/* <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl p-6 text-primary-50 shadow-2xl transition-transform hover:-translate-y-1">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl p-6 text-primary-50 shadow-2xl transition-transform hover:-translate-y-1">
               <div>
                 <h3 className="text-xl font-bold">Host your event on Replix</h3>
                 <p className="mt-2 text-sm text-primary-300">
@@ -385,7 +385,7 @@ export default function EventsPage() {
                 </p>
 
                 <ul className="mt-4 flex flex-col gap-2 text-sm text-primary-300">
-                  <li>• Auto-judge & plagiarism checks</li>
+                  <li>• Auto-judge & standard parameters checks</li>
                   <li>• Scalable infrastructure for any size</li>
                   <li>• Promotion & participant management</li>
                 </ul>
@@ -399,7 +399,7 @@ export default function EventsPage() {
 
                 <span className="text-xs text-primary-300">Trusted by campus clubs & companies</span>
               </div>
-            </div> */}
+            </div>
 
 
 

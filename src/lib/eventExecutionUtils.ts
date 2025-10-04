@@ -206,7 +206,9 @@ export async function saveDetailedExecution(executionDetails: any) {
         date: Date.now()
     };
 
-    const apiUrl = 'https://replix-mindmaze-backend.onrender.com/api/save';
+    // const apiUrl = 'https://replix-mindmaze-backend.onrender.com/api/save';
+
+    const apiUrl = 'https://replix-gdgoc-test-backend.onrender.com/api/save';
 
     try {
         const response = await fetch(apiUrl, {

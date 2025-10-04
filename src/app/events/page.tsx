@@ -149,6 +149,19 @@ const sampleEvents: Event[] = [
     // attendees: 0,
     // prize: "₹10,000 + Internship",
   },
+  {
+    id: "gdgoc-aec",
+    title: "GDGoC-AEC Core Team Hiring Test",
+    description:
+      "GDGoC-AEC Core Team Hiring Test",
+    href: "/events/gdgoc-aec",
+    status: "Upcoming",
+    tags: ["Competitive Programming", "Algorithms", "Data Structures", "DSA"],
+    // date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 14).toISOString(),
+    date: "10 Oct, 2025, 01:00 pm",
+    // attendees: 0,
+    // prize: "₹10,000 + Internship",
+  },
   // {
   //   id: "algosprint",
   //   title: "AlgoSprint Hack 2025",

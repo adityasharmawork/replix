@@ -2,7 +2,7 @@
 
 import HeaderProfileBtn from "@/app/editor/_components/HeaderProfileBtn";
 import { SignedOut } from "@clerk/nextjs";
-import { Calendar, Code, Container, LucideChartColumnIncreasing, LucideIcon, Menu, Star, X } from "lucide-react";
+import { BookOpen, Calendar, Code, Container, LucideChartColumnIncreasing, LucideIcon, Menu, Star, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -12,7 +12,8 @@ const GITHUB_REPO = "https://github.com/adityasharmawork/replix";
 const navLinks = [
   { href: "/editor", label: "Code", icon: Code },
   { href: "/events", label: "Events", icon: Calendar },
-  { href: "/learning", label: "Learning", icon: LucideChartColumnIncreasing },
+  { href: "/learning", label: "Learning", icon: BookOpen },
+  { href: "/practice", label: "Practice", icon: LucideChartColumnIncreasing },
   { href: "/snippets", label: "Community", icon: Container },
 ];
 

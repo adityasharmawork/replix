@@ -116,7 +116,7 @@ export default function RoomPage() {
   const params = useParams();
   const roomId = params.roomId as string;
 
-  const status:any = "Upcoming";
+  const status:any = "Live";
 
 //   const stdinRef = useRef<HTMLTextAreaElement>(null);
   
@@ -271,13 +271,22 @@ export default function RoomPage() {
                 <NewExpectedOutputPanel expectedOutput={room.expectedOutput} />
               </div> */}
 
-              <div className="grid md:grid-cols-1 gap-3 flex-1 w-full xl:min-w-[32vw] min-h-0">
+              {/* <div className="grid md:grid-cols-1 gap-3 flex-1 w-full xl:min-w-[32vw] min-h-0">
                 <div className="flex flex-col min-h-0 overflow-y-auto rounded-lg bg-[#181825] p-2">
                   <NewEventOutputPanel expectedOutput={room.expectedOutput} />
-                </div>
+                </div> */}
                 {/* <div className="flex flex-col min-h-0 overflow-y-auto rounded-lg bg-[#181825] p-2">
                   <NewExpectedOutputPanel expectedOutput={room.expectedOutput} />
                 </div> */}
+              {/* </div> */}
+
+              <div className="grid md:grid-cols-2 gap-3 flex-1 w-full xl:min-w-[32vw] min-h-0">
+                <div className="flex flex-col min-h-0 overflow-y-auto rounded-lg bg-[#181825] p-2">
+                  <NewEventOutputPanel expectedOutput={room.expectedOutput} />
+                </div>
+                <div className="flex flex-col min-h-0 overflow-y-auto rounded-lg bg-[#181825] p-2">
+                  <NewExpectedOutputPanel expectedOutput={room.expectedOutput} />
+                </div>
               </div>
 
 

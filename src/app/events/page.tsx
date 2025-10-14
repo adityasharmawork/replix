@@ -155,7 +155,7 @@ const sampleEvents: Event[] = [
     description:
       "GDGoC-AEC Core Team Hiring Test",
     href: "/events/gdgoc-aec",
-    status: "Upcoming",
+    status: "Live",
     tags: ["Competitive Programming", "Algorithms", "Data Structures", "DSA"],
     // date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 14).toISOString(),
     date: "14 Oct, 2025, 08:00 pm",

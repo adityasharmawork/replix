@@ -158,7 +158,7 @@ const sampleEvents: Event[] = [
     status: "Upcoming",
     tags: ["Competitive Programming", "Algorithms", "Data Structures", "DSA"],
     // date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 14).toISOString(),
-    date: "12 Oct, 2025, 01:00 pm",
+    date: "14 Oct, 2025, 08:00 pm",
     // attendees: 0,
     // prize: "₹10,000 + Internship",
   },

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "mkdir -p public/translations && cp src/lingo/cache/*.json public/translations/ && next build",
     "start": "next start",
     "lint": "next lint"
   },

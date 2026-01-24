@@ -11,6 +11,7 @@
   "dependencies": {
     "@clerk/nextjs": "^6.15.0",
     "@google/generative-ai": "^0.24.1",
+    "@lingo.dev/compiler": "^0.1.12",
     "@monaco-editor/react": "^4.7.0",
     "@vercel/analytics": "^1.5.0",
     "convex": "^1.19.2",

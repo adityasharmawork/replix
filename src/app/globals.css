@@ -110,3 +110,15 @@
     transform: translateY(0px);
   }
 }
+
+#lingo-widget, 
+[data-lingo-widget],
+lingo-widget {
+  display: none !important;
+}
+
+#lingo-dev-widget, 
+[data-lingo-dev-widget],
+lingo-dev-widget {
+  display: none !important;
+}

@@ -1,3 +1,5 @@
+"use client";
+
 // import { currentUser } from "@clerk/nextjs/server"
 // import { ConvexHttpClient } from "convex/browser";
 import NavigationHeader from "@/components/NavigationHeader";

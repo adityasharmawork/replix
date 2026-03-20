@@ -41,7 +41,7 @@ const AIAssistantPanel: React.FC = () => {
     }
     setIsModalOpen(true);
   };
-  
+
   const closeModal = () => {
     setIsModalOpen(false);
     setGeneratedCode("");
@@ -53,12 +53,12 @@ const AIAssistantPanel: React.FC = () => {
   const handlePromptSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!prompt.trim() && aiActionType === "generate") {
-        setError("Please describe what you want to generate.");
-        return;
+      setError("Please describe what you want to generate.");
+      return;
     }
     if (!prompt.trim() && aiActionType === "fix") {
-        setError("Please describe the error.");
-        return;
+      setError("Please describe the error.");
+      return;
     }
 
 
@@ -69,12 +69,12 @@ const AIAssistantPanel: React.FC = () => {
     let fullApiPrompt = "";
 
     if (aiActionType === "fix") {
-        if (!codeToFix.trim() || codeToFix.startsWith("// No code found")) {
-            setError("No code available to fix. Please ensure there is code in your editor.");
-            setIsGenerating(false);
-            return;
-        }
-        fullApiPrompt = `You are an AI assistant helping to debug code.
+      if (!codeToFix.trim() || codeToFix.startsWith("// No code found")) {
+        setError("No code available to fix. Please ensure there is code in your editor.");
+        setIsGenerating(false);
+        return;
+      }
+      fullApiPrompt = `You are an AI assistant helping to debug code.
 Language: ${currentLanguage}.
 Task: Analyze the following code and the error description. Provide a corrected version of the code.
 Do not provide explanations, provide only the corrected code. The primary output should be the corrected code block.
@@ -91,7 +91,7 @@ ${codeToFix}
 Corrected Code (only the code block):
 `;
     } else { // "generate"
-        fullApiPrompt = `You are an AI assistant helping to generate code.
+      fullApiPrompt = `You are an AI assistant helping to generate code.
 Language: ${currentLanguage}.
 Task: Generate code based on the following request. Provide only the code block itself without any surrounding text or explanations.
 
@@ -111,6 +111,9 @@ Generated Code (only the code block):
 
       const data = await response.json();
       if (!response.ok) {
+        if (response.status === 429) {
+          throw new Error("All AI quotas exceeded. Please try again later.");
+        }
         throw new Error(data.error || `Failed to ${aiActionType === "fix" ? "fix code" : "generate code"} (Status: ${response.status})`);
       }
       setGeneratedCode(data.code as string);
@@ -140,13 +143,13 @@ Generated Code (only the code block):
       }
     }
   };
-  
+
   const modalTitle = aiActionType === "fix" ? "AI Error Debugger" : "AI Code Generation";
-  const currentActionPromptPlaceholder = aiActionType === "fix" 
-    ? "e.g., Getting 'TypeError: cannot read property 'map' of undefined' on line 10..." 
+  const currentActionPromptPlaceholder = aiActionType === "fix"
+    ? "e.g., Getting 'TypeError: cannot read property 'map' of undefined' on line 10..."
     : `e.g., Generate Dijsktra's Algorithm code in ${currentLanguage}`;
-  const currentActionLabelText = aiActionType === "fix" 
-    ? `Describe the error in your ${currentLanguage} code:` 
+  const currentActionLabelText = aiActionType === "fix"
+    ? `Describe the error in your ${currentLanguage} code:`
     : `Describe the code you want to generate in ${currentLanguage}:`;
 
   return (
@@ -161,24 +164,24 @@ Generated Code (only the code block):
         </div>
 
         <div className="xl:flex xl:items-center gap-3 mx-2">
-            <button
-                onClick={() => openModalForAction("fix")}
-                className="flex items-center gap-2 px-2 py-1 mb-1 xl:mb-0 xl:px-4 xl:py-2 bg-red-600 hover:bg-red-700 text-white
+          <button
+            onClick={() => openModalForAction("fix")}
+            className="flex items-center gap-2 px-2 py-1 mb-1 xl:mb-0 xl:px-4 xl:py-2 bg-red-600 hover:bg-red-700 text-white
                           rounded-lg xl:text-md transition-colors"
-                title="Fix error with AI"
-            >
-                <Wrench className="w-5 h-5" /> 
-                Fix Error with AI
-            </button>
-            <button
-                onClick={() => openModalForAction("generate")}
-                className="flex items-center gap-2 px-2 py-1 mb-1 xl:mb-0 xl:px-4 xl:py-2 bg-blue-600 hover:bg-blue-700 text-white 
+            title="Fix error with AI"
+          >
+            <Wrench className="w-5 h-5" />
+            Fix Error with AI
+          </button>
+          <button
+            onClick={() => openModalForAction("generate")}
+            className="flex items-center gap-2 px-2 py-1 mb-1 xl:mb-0 xl:px-4 xl:py-2 bg-blue-600 hover:bg-blue-700 text-white 
                           rounded-lg text-md transition-colors"
-                title="Generate code with AI"
-            >
-                <Sparkles className="w-5 h-5" />
-                Generate Code with AI
-            </button>
+            title="Generate code with AI"
+          >
+            <Sparkles className="w-5 h-5" />
+            Generate Code with AI
+          </button>
         </div>
       </div>
 
@@ -191,9 +194,9 @@ Generated Code (only the code block):
             <div className="flex items-center justify-between p-4 border-b border-gray-700">
               <div className="flex items-center gap-3">
                 {aiActionType === "fix" ? (
-                    <Wrench className="w-6 h-6 text-red-400" />
+                  <Wrench className="w-6 h-6 text-red-400" />
                 ) : (
-                    <Sparkles className="w-6 h-6 text-blue-400" />
+                  <Sparkles className="w-6 h-6 text-blue-400" />
                 )}
                 <h2 className="text-xl font-semibold text-gray-100">{modalTitle}</h2>
               </div>
@@ -217,7 +220,7 @@ Generated Code (only the code block):
                   </pre>
                 </div>
               )}
-              
+
               <form onSubmit={handlePromptSubmit} className="space-y-3">
                 <div>
                   <label htmlFor="aiPromptTextarea" className="block text-md font-medium text-gray-300 mb-2">
@@ -236,14 +239,14 @@ Generated Code (only the code block):
                 <div className="flex justify-end">
                   <SignedIn>
                     <button
-                    type="submit"
-                    disabled={isGenerating}
-                    className={`flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white 
+                      type="submit"
+                      disabled={isGenerating}
+                      className={`flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white 
                       rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed
-                      ${aiActionType === "fix" 
-                        ? "bg-red-600 hover:bg-red-700" 
-                        : "bg-blue-600 hover:bg-blue-700"
-                      }`}
+                      ${aiActionType === "fix"
+                          ? "bg-red-600 hover:bg-red-700"
+                          : "bg-blue-600 hover:bg-blue-700"
+                        }`}
                     >
                       {isGenerating ? (
                         <>
@@ -262,14 +265,14 @@ Generated Code (only the code block):
                   <SignedOut>
                     <LoginButton />
                   </SignedOut>
-                  
+
                 </div>
               </form>
 
               {error && (
                 <div className="mt-2 p-3 bg-red-900/30 border border-red-700/50 rounded-lg text-red-300 text-sm shadow">
                   <div className="flex items-center gap-2">
-                    <ShieldAlert className="w-5 h-5 text-red-400"/>
+                    <ShieldAlert className="w-5 h-5 text-red-400" />
                     <p className="font-semibold">Error</p>
                   </div>
                   <p className="mt-1 opacity-90">{error}</p>

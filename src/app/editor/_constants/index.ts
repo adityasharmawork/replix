@@ -25,22 +25,22 @@ export const LANGUAGE_CONFIG: LanguageConfig = {
     logoPath: "/javascript.png",
     pistonRuntime: { language: "javascript", version: "18.15.0" }, // api that we're gonna be using
     monacoLanguage: "javascript",
-//     defaultCode: `// JavaScript Playground
-// const numbers = [1, 2, 3, 4, 5];
+    //     defaultCode: `// JavaScript Playground
+    // const numbers = [1, 2, 3, 4, 5];
 
-// // Map numbers to their squares
-// const squares = numbers.map(n => n * n);
-// console.log('Original numbers:', numbers);
-// console.log('Squared numbers:', squares);
+    // // Map numbers to their squares
+    // const squares = numbers.map(n => n * n);
+    // console.log('Original numbers:', numbers);
+    // console.log('Squared numbers:', squares);
 
-// // Filter for even numbers
-// const evenNumbers = numbers.filter(n => n % 2 === 0);
-// console.log('Even numbers:', evenNumbers);
+    // // Filter for even numbers
+    // const evenNumbers = numbers.filter(n => n % 2 === 0);
+    // console.log('Even numbers:', evenNumbers);
 
-// // Calculate sum using reduce
-// const sum = numbers.reduce((acc, curr) => acc + curr, 0);
-// console.log('Sum of numbers:', sum);`,
-defaultCode: `
+    // // Calculate sum using reduce
+    // const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+    // console.log('Sum of numbers:', sum);`,
+    defaultCode: `
 console.log("Welcome to Replix - Code in any language, anytime!");
 
 // Example
@@ -57,38 +57,38 @@ console.log('Squared numbers:', squares);
     logoPath: "/typescript.png",
     pistonRuntime: { language: "typescript", version: "5.0.3" },
     monacoLanguage: "typescript",
-//     defaultCode: `// TypeScript Playground
-// interface NumberArray {
-//   numbers: number[];
-//   sum(): number;
-//   squares(): number[];
-//   evenNumbers(): number[];
-// }
+    //     defaultCode: `// TypeScript Playground
+    // interface NumberArray {
+    //   numbers: number[];
+    //   sum(): number;
+    //   squares(): number[];
+    //   evenNumbers(): number[];
+    // }
 
-// class MathOperations implements NumberArray {
-//   constructor(public numbers: number[]) {}
+    // class MathOperations implements NumberArray {
+    //   constructor(public numbers: number[]) {}
 
-//   sum(): number {
-//     return this.numbers.reduce((acc, curr) => acc + curr, 0);
-//   }
+    //   sum(): number {
+    //     return this.numbers.reduce((acc, curr) => acc + curr, 0);
+    //   }
 
-//   squares(): number[] {
-//     return this.numbers.map(n => n * n);
-//   }
+    //   squares(): number[] {
+    //     return this.numbers.map(n => n * n);
+    //   }
 
-//   evenNumbers(): number[] {
-//     return this.numbers.filter(n => n % 2 === 0);
-//   }
-// }
+    //   evenNumbers(): number[] {
+    //     return this.numbers.filter(n => n % 2 === 0);
+    //   }
+    // }
 
-// const math = new MathOperations([1, 2, 3, 4, 5]);
+    // const math = new MathOperations([1, 2, 3, 4, 5]);
 
-// console.log('Original numbers:', math.numbers);
-// console.log('Squared numbers:', math.squares());
-// console.log('Even numbers:', math.evenNumbers());
-// console.log('Sum of numbers:', math.sum());`,
+    // console.log('Original numbers:', math.numbers);
+    // console.log('Squared numbers:', math.squares());
+    // console.log('Even numbers:', math.evenNumbers());
+    // console.log('Sum of numbers:', math.sum());`,
 
-defaultCode: `
+    defaultCode: `
 console.log("Welcome to Replix - Your multi-language coding playground!");
 
 // Example
@@ -105,23 +105,23 @@ console.log('Squared numbers:', squares);
     logoPath: "/python.png",
     pistonRuntime: { language: "python", version: "3.10.0" },
     monacoLanguage: "python",
-//     defaultCode: `# Python Playground
-// numbers = [1, 2, 3, 4, 5]
+    //     defaultCode: `# Python Playground
+    // numbers = [1, 2, 3, 4, 5]
 
-// # Map numbers to their squares
-// squares = [n ** 2 for n in numbers]
-// print(f"Original numbers: {numbers}")
-// print(f"Squared numbers: {squares}")
+    // # Map numbers to their squares
+    // squares = [n ** 2 for n in numbers]
+    // print(f"Original numbers: {numbers}")
+    // print(f"Squared numbers: {squares}")
 
-// # Filter for even numbers
-// even_numbers = [n for n in numbers if n % 2 == 0]
-// print(f"Even numbers: {even_numbers}")
+    // # Filter for even numbers
+    // even_numbers = [n for n in numbers if n % 2 == 0]
+    // print(f"Even numbers: {even_numbers}")
 
-// # Calculate sum
-// numbers_sum = sum(numbers)
-// print(f"Sum of numbers: {numbers_sum}")`,
+    // # Calculate sum
+    // numbers_sum = sum(numbers)
+    // print(f"Sum of numbers: {numbers_sum}")`,
 
-defaultCode: `
+    defaultCode: `
 print("Welcome to Replix - Code in Python, or any language you love!")
 
 # Example
@@ -138,43 +138,43 @@ print("Squared numbers:", squares)
     logoPath: "/java.png",
     pistonRuntime: { language: "java", version: "15.0.2" },
     monacoLanguage: "java",
-//     defaultCode: `public class Main {
-//       public static void main(String[] args) {
-//       // Create array
-//       int[] numbers = {1, 2, 3, 4, 5};
-      
-//       // Print original numbers
-//       System.out.print("Original numbers: ");
-//       printArray(numbers);
-      
-//       // Calculate and print squares
-//       int[] squares = new int[numbers.length];
-//       for (int i = 0; i < numbers.length; i++) {
-//           squares[i] = numbers[i] * numbers[i];
-//       }
-//       System.out.print("Squared numbers: ");
-//       printArray(squares);
-      
-//       // Print even numbers
-//       System.out.print("Even numbers: ");
-//       for (int n : numbers) {
-//           if (n % 2 == 0) System.out.print(n + " ");
-//       }
-//       System.out.println();
-      
-//       // Calculate and print sum
-//       int sum = 0;
-//       for (int n : numbers) sum += n;
-//       System.out.println("Sum of numbers: " + sum);
-//   }
-  
-//   private static void printArray(int[] arr) {
-//       for (int n : arr) System.out.print(n + " ");
-//       System.out.println();
-//   }
-// }`,
+    //     defaultCode: `public class Main {
+    //       public static void main(String[] args) {
+    //       // Create array
+    //       int[] numbers = {1, 2, 3, 4, 5};
 
-defaultCode: `
+    //       // Print original numbers
+    //       System.out.print("Original numbers: ");
+    //       printArray(numbers);
+
+    //       // Calculate and print squares
+    //       int[] squares = new int[numbers.length];
+    //       for (int i = 0; i < numbers.length; i++) {
+    //           squares[i] = numbers[i] * numbers[i];
+    //       }
+    //       System.out.print("Squared numbers: ");
+    //       printArray(squares);
+
+    //       // Print even numbers
+    //       System.out.print("Even numbers: ");
+    //       for (int n : numbers) {
+    //           if (n % 2 == 0) System.out.print(n + " ");
+    //       }
+    //       System.out.println();
+
+    //       // Calculate and print sum
+    //       int sum = 0;
+    //       for (int n : numbers) sum += n;
+    //       System.out.println("Sum of numbers: " + sum);
+    //   }
+
+    //   private static void printArray(int[] arr) {
+    //       for (int n : arr) System.out.print(n + " ");
+    //       System.out.println();
+    //   }
+    // }`,
+
+    defaultCode: `
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Replix - The ultimate cross-language IDE!");
@@ -197,42 +197,42 @@ public class Main {
     logoPath: "/go.png",
     pistonRuntime: { language: "go", version: "1.16.2" },
     monacoLanguage: "go",
-//     defaultCode: `package main
+    //     defaultCode: `package main
 
-// import "fmt"
+    // import "fmt"
 
-// func main() {
-//   // Create slice
-//   numbers := []int{1, 2, 3, 4, 5}
-  
-//   // Print original numbers
-//   fmt.Println("Original numbers:", numbers)
-  
-//   // Calculate squares
-//   squares := make([]int, len(numbers))
-//   for i, n := range numbers {
-//       squares[i] = n * n
-//   }
-//   fmt.Println("Squared numbers:", squares)
-  
-//   // Filter even numbers
-//   var evenNumbers []int
-//   for _, n := range numbers {
-//       if n%2 == 0 {
-//           evenNumbers = append(evenNumbers, n)
-//       }
-//   }
-//   fmt.Println("Even numbers:", evenNumbers)
-  
-//   // Calculate sum
-//   sum := 0
-//   for _, n := range numbers {
-//       sum += n
-//   }
-//   fmt.Println("Sum of numbers:", sum)
-// }`,
+    // func main() {
+    //   // Create slice
+    //   numbers := []int{1, 2, 3, 4, 5}
 
-defaultCode: `
+    //   // Print original numbers
+    //   fmt.Println("Original numbers:", numbers)
+
+    //   // Calculate squares
+    //   squares := make([]int, len(numbers))
+    //   for i, n := range numbers {
+    //       squares[i] = n * n
+    //   }
+    //   fmt.Println("Squared numbers:", squares)
+
+    //   // Filter even numbers
+    //   var evenNumbers []int
+    //   for _, n := range numbers {
+    //       if n%2 == 0 {
+    //           evenNumbers = append(evenNumbers, n)
+    //       }
+    //   }
+    //   fmt.Println("Even numbers:", evenNumbers)
+
+    //   // Calculate sum
+    //   sum := 0
+    //   for _, n := range numbers {
+    //       sum += n
+    //   }
+    //   fmt.Println("Sum of numbers:", sum)
+    // }`,
+
+    defaultCode: `
 package main
 
 import "fmt"
@@ -259,34 +259,34 @@ func main() {
     logoPath: "/rust.png",
     pistonRuntime: { language: "rust", version: "1.68.2" },
     monacoLanguage: "rust",
-//     defaultCode: `fn main() {
-//     // Create vector
-//     let numbers = vec![1, 2, 3, 4, 5];
-    
-//     // Print original numbers
-//     println!("Original numbers: {:?}", numbers);
-    
-//     // Calculate squares
-//     let squares: Vec<i32> = numbers
-//         .iter()
-//         .map(|&n| n * n)
-//         .collect();
-//     println!("Squared numbers: {:?}", squares);
-    
-//     // Filter even numbers
-//     let even_numbers: Vec<i32> = numbers
-//         .iter()
-//         .filter(|&&n| n % 2 == 0)
-//         .cloned()
-//         .collect();
-//     println!("Even numbers: {:?}", even_numbers);
-    
-//     // Calculate sum
-//     let sum: i32 = numbers.iter().sum();
-//     println!("Sum of numbers: {}", sum);
-// }`,
+    //     defaultCode: `fn main() {
+    //     // Create vector
+    //     let numbers = vec![1, 2, 3, 4, 5];
 
-defaultCode: `
+    //     // Print original numbers
+    //     println!("Original numbers: {:?}", numbers);
+
+    //     // Calculate squares
+    //     let squares: Vec<i32> = numbers
+    //         .iter()
+    //         .map(|&n| n * n)
+    //         .collect();
+    //     println!("Squared numbers: {:?}", squares);
+
+    //     // Filter even numbers
+    //     let even_numbers: Vec<i32> = numbers
+    //         .iter()
+    //         .filter(|&&n| n % 2 == 0)
+    //         .cloned()
+    //         .collect();
+    //     println!("Even numbers: {:?}", even_numbers);
+
+    //     // Calculate sum
+    //     let sum: i32 = numbers.iter().sum();
+    //     println!("Sum of numbers: {}", sum);
+    // }`,
+
+    defaultCode: `
 fn main() {
     println!("Welcome to Replix - Fuel your code with Rust and more!");
 
@@ -305,7 +305,7 @@ fn main() {
     logoPath: "/c.png",
     pistonRuntime: { language: "c", version: "10.2.0" },
     monacoLanguage: "c",
-defaultCode: `
+    defaultCode: `
 #include <stdio.h>
 
 int main() {
@@ -335,45 +335,45 @@ int main() {
     logoPath: "/cpp.png",
     pistonRuntime: { language: "cpp", version: "10.2.0" },
     monacoLanguage: "cpp",
-//     defaultCode: `#include <iostream>
-// #include <vector>
-// #include <algorithm>
-// #include <numeric>
+    //     defaultCode: `#include <iostream>
+    // #include <vector>
+    // #include <algorithm>
+    // #include <numeric>
 
-// int main() {
-//     // Create vector
-//     std::vector<int> numbers = {1, 2, 3, 4, 5};
-    
-//     // Print original numbers
-//     std::cout << "Original numbers: ";
-//     for (int n : numbers) std::cout << n << " ";
-//     std::cout << std::endl;
-    
-//     // Calculate squares
-//     std::vector<int> squares;
-//     std::transform(numbers.begin(), numbers.end(), 
-//                   std::back_inserter(squares),
-//                   [](int n) { return n * n; });
-    
-//     std::cout << "Squared numbers: ";
-//     for (int n : squares) std::cout << n << " ";
-//     std::cout << std::endl;
-    
-//     // Filter even numbers
-//     std::cout << "Even numbers: ";
-//     for (int n : numbers) {
-//         if (n % 2 == 0) std::cout << n << " ";
-//     }
-//     std::cout << std::endl;
-    
-//     // Calculate sum
-//     int sum = std::accumulate(numbers.begin(), numbers.end(), 0);
-//     std::cout << "Sum of numbers: " << sum << std::endl;
-    
-//     return 0;
-// }`,
+    // int main() {
+    //     // Create vector
+    //     std::vector<int> numbers = {1, 2, 3, 4, 5};
 
-defaultCode: `
+    //     // Print original numbers
+    //     std::cout << "Original numbers: ";
+    //     for (int n : numbers) std::cout << n << " ";
+    //     std::cout << std::endl;
+
+    //     // Calculate squares
+    //     std::vector<int> squares;
+    //     std::transform(numbers.begin(), numbers.end(), 
+    //                   std::back_inserter(squares),
+    //                   [](int n) { return n * n; });
+
+    //     std::cout << "Squared numbers: ";
+    //     for (int n : squares) std::cout << n << " ";
+    //     std::cout << std::endl;
+
+    //     // Filter even numbers
+    //     std::cout << "Even numbers: ";
+    //     for (int n : numbers) {
+    //         if (n % 2 == 0) std::cout << n << " ";
+    //     }
+    //     std::cout << std::endl;
+
+    //     // Calculate sum
+    //     int sum = std::accumulate(numbers.begin(), numbers.end(), 0);
+    //     std::cout << "Sum of numbers: " << sum << std::endl;
+
+    //     return 0;
+    // }`,
+
+    defaultCode: `
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -397,34 +397,34 @@ int main() {
     id: "csharp",
     label: "C#",
     logoPath: "/csharp.png",
-    pistonRuntime: { language: "csharp", version: "6.12.0" },
+    pistonRuntime: { language: "csharp.net", version: "5.0.201" },
     monacoLanguage: "csharp",
-//     defaultCode: `using System;
-// using System.Linq;
+    //     defaultCode: `using System;
+    // using System.Linq;
 
-// class Program {
-//     static void Main() {
-//         // Create array
-//         int[] numbers = { 1, 2, 3, 4, 5 };
-        
-//         // Print original numbers
-//         Console.WriteLine($"Original numbers: {string.Join(" ", numbers)}");
-        
-//         // Calculate squares
-//         var squares = numbers.Select(n => n * n);
-//         Console.WriteLine($"Squared numbers: {string.Join(" ", squares)}");
-        
-//         // Filter even numbers
-//         var evenNumbers = numbers.Where(n => n % 2 == 0);
-//         Console.WriteLine($"Even numbers: {string.Join(" ", evenNumbers)}");
-        
-//         // Calculate sum
-//         var sum = numbers.Sum();
-//         Console.WriteLine($"Sum of numbers: {sum}");
-//     }
-// }`,
+    // class Program {
+    //     static void Main() {
+    //         // Create array
+    //         int[] numbers = { 1, 2, 3, 4, 5 };
 
-defaultCode: `
+    //         // Print original numbers
+    //         Console.WriteLine($"Original numbers: {string.Join(" ", numbers)}");
+
+    //         // Calculate squares
+    //         var squares = numbers.Select(n => n * n);
+    //         Console.WriteLine($"Squared numbers: {string.Join(" ", squares)}");
+
+    //         // Filter even numbers
+    //         var evenNumbers = numbers.Where(n => n % 2 == 0);
+    //         Console.WriteLine($"Even numbers: {string.Join(" ", evenNumbers)}");
+
+    //         // Calculate sum
+    //         var sum = numbers.Sum();
+    //         Console.WriteLine($"Sum of numbers: {sum}");
+    //     }
+    // }`,
+
+    defaultCode: `
 using System;
 using System.Linq;
 
@@ -448,25 +448,25 @@ class Program {
     logoPath: "/ruby.png",
     pistonRuntime: { language: "ruby", version: "3.0.1" },
     monacoLanguage: "ruby",
-//     defaultCode: `# Create array
-// numbers = [1, 2, 3, 4, 5]
+    //     defaultCode: `# Create array
+    // numbers = [1, 2, 3, 4, 5]
 
-// # Print original numbers
-// puts "Original numbers: #{numbers.join(' ')}"
+    // # Print original numbers
+    // puts "Original numbers: #{numbers.join(' ')}"
 
-// # Calculate squares
-// squares = numbers.map { |n| n * n }
-// puts "Squared numbers: #{squares.join(' ')}"
+    // # Calculate squares
+    // squares = numbers.map { |n| n * n }
+    // puts "Squared numbers: #{squares.join(' ')}"
 
-// # Filter even numbers
-// even_numbers = numbers.select { |n| n.even? }
-// puts "Even numbers: #{even_numbers.join(' ')}"
+    // # Filter even numbers
+    // even_numbers = numbers.select { |n| n.even? }
+    // puts "Even numbers: #{even_numbers.join(' ')}"
 
-// # Calculate sum
-// sum = numbers.sum
-// puts "Sum of numbers: #{sum}"`,
+    // # Calculate sum
+    // sum = numbers.sum
+    // puts "Sum of numbers: #{sum}"`,
 
-defaultCode: `
+    defaultCode: `
 puts "Welcome to Replix - Code freely in Ruby and beyond!"
 
 numbers = [1, 2, 3, 4, 5]
@@ -483,25 +483,25 @@ puts "Squared numbers: #{squares}"
     logoPath: "/swift.png",
     pistonRuntime: { language: "swift", version: "5.3.3" },
     monacoLanguage: "swift",
-//     defaultCode: `// Create array
-// let numbers = [1, 2, 3, 4, 5]
+    //     defaultCode: `// Create array
+    // let numbers = [1, 2, 3, 4, 5]
 
-// // Print original numbers
-// print("Original numbers: \\(numbers)")
+    // // Print original numbers
+    // print("Original numbers: \\(numbers)")
 
-// // Calculate squares
-// let squares = numbers.map { $0 * $0 }
-// print("Squared numbers: \\(squares)")
+    // // Calculate squares
+    // let squares = numbers.map { $0 * $0 }
+    // print("Squared numbers: \\(squares)")
 
-// // Filter even numbers
-// let evenNumbers = numbers.filter { $0 % 2 == 0 }
-// print("Even numbers: \\(evenNumbers)")
+    // // Filter even numbers
+    // let evenNumbers = numbers.filter { $0 % 2 == 0 }
+    // print("Even numbers: \\(evenNumbers)")
 
-// // Calculate sum
-// let sum = numbers.reduce(0, +)
-// print("Sum of numbers: \\(sum)")`,
+    // // Calculate sum
+    // let sum = numbers.reduce(0, +)
+    // print("Sum of numbers: \\(sum)")`,
 
-defaultCode: `
+    defaultCode: `
 print("Welcome to Replix - Swift coding meets universal IDE!")
 
 let numbers = [1, 2, 3, 4, 5]
@@ -512,6 +512,119 @@ print("Squared numbers: \(squares)")
 
 `
   },
+  crystal: {
+    id: "crystal",
+    label: "Crystal",
+    logoPath: "/crystal.png",
+    pistonRuntime: { language: "crystal", version: "0.36.1" },
+    monacoLanguage: "crystal",
+    defaultCode: `
+puts "Welcome to Replix - Crystal!"
+`
+  },
+  dart: {
+    id: "dart",
+    label: "Dart",
+    logoPath: "/dart.png",
+    pistonRuntime: { language: "dart", version: "2.19.6" },
+    monacoLanguage: "dart",
+    defaultCode: `
+void main() {
+  print('Welcome to Replix - Dart!');
+}
+`
+  },
+  fsharp: {
+    id: "fsharp",
+    label: "F#",
+    logoPath: "/fsharp.png",
+    pistonRuntime: { language: "fsharp.net", version: "5.0.201" },
+    monacoLanguage: "fsharp",
+    defaultCode: `
+printfn "Welcome to Replix - F#!"
+`
+  },
+  elixir: {
+    id: "elixir",
+    label: "Elixir",
+    logoPath: "/elixir.png",
+    pistonRuntime: { language: "elixir", version: "1.11.3" },
+    monacoLanguage: "elixir",
+    defaultCode: `
+IO.puts("Welcome to Replix - Elixir!")
+`
+  },
+  fortran: {
+    id: "fortran",
+    label: "Fortran",
+    logoPath: "/fortran.png",
+    pistonRuntime: { language: "fortran", version: "10.2.0" },
+    monacoLanguage: "plaintext",
+    defaultCode: `
+program hello
+  print *, "Welcome to Replix - Fortran!"
+end program hello
+`
+  },
+  kotlin: {
+    id: "kotlin",
+    label: "Kotlin",
+    logoPath: "/kotlin.png",
+    pistonRuntime: { language: "kotlin", version: "1.8.20" },
+    monacoLanguage: "kotlin",
+    defaultCode: `
+fun main() {
+    println("Welcome to Replix - Kotlin!")
+}
+`
+  },
+  ocaml: {
+    id: "ocaml",
+    label: "OCaml",
+    logoPath: "/ocaml.png",
+    pistonRuntime: { language: "ocaml", version: "4.12.0" },
+    monacoLanguage: "ocaml",
+    defaultCode: `
+print_endline "Welcome to Replix - OCaml!";;
+`
+  },
+  php: {
+    id: "php",
+    label: "PHP",
+    logoPath: "/php.png",
+    pistonRuntime: { language: "php", version: "8.2.3" },
+    monacoLanguage: "php",
+    defaultCode: `<?php
+
+echo "Welcome to Replix - PHP!\\n";
+`
+  },
+  scala: {
+    id: "scala",
+    label: "Scala",
+    logoPath: "/scala.png",
+    pistonRuntime: { language: "scala", version: "3.2.2" },
+    monacoLanguage: "scala",
+    defaultCode: `
+object Default {
+  def main(args: Array[String]): Unit = {
+    println("Welcome to Replix - Scala!")
+  }
+}
+`
+  },
+  sqlite3: {
+    id: "sqlite3",
+    label: "SQLite3",
+    logoPath: "/sqlite3.png",
+    pistonRuntime: { language: "sqlite3", version: "3.36.0" },
+    monacoLanguage: "sql",
+    defaultCode: `
+CREATE TABLE test(id integer primary key, message text);
+INSERT INTO test(message) VALUES ('Welcome to Replix - SQLite3!');
+SELECT * FROM test;
+`
+  }
 };
 
 export const THEMES: Theme[] = [
